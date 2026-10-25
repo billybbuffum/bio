@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final Exam | Bio 101</title>
+<meta name="description" content="Bio 101 cumulative final exam.">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/data/quizzes.js"></script>
+<script defer src="assets/js/course.js"></script>
+</head>
+<body data-root="." data-page="final">
+<header id="site-header"></header>
+<main class="wrap narrow">
+  <h1 style="margin-top:1.2em">Final Exam</h1>
+  <p>This cumulative exam has <strong>44 questions</strong>: 4 drawn at random from each week's question bank, plus 4 integrative questions that connect topics across the course. You need <strong>70%</strong> to pass. It's open-book in spirit (it's your learning!), but try it closed-book first to see what you really know.</p>
+  <div class="callout"><span class="callout-title">Before you start</span>
+    <ul>
+      <li>Set aside about 45–60 minutes.</li>
+      <li>Each attempt draws a fresh set of questions, so retakes are different.</li>
+      <li>Your best score is saved to <a href="progress.html">My Progress</a>.</li>
+    </ul>
+  </div>
+  <div class="readout"><div><b id="fx-best">—</b><span>Best score so far</span></div><div><b id="fx-time">0:00</b><span>Time on this attempt</span></div></div>
+  <div class="btn-row"><button class="btn primary" id="fx-start">Begin exam</button></div>
+  <div class="quiz" data-quiz="final" id="fx"></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var best = Bio.store.get().final;
+    document.getElementById("fx-best").textContent = best != null ? best + "%" : "—";
+    var t0 = null, iv = null;
+    function sample() {
+      var qs = [];
+      Object.keys(Bio.QUIZZES).forEach(function (w) {
+        Bio.shuffle(Bio.QUIZZES[w]).slice(0, 4).forEach(function (q) { qs.push(Object.assign({ week: +w }, q)); });
+      });
+      Bio.FINAL_EXTRA.forEach(function (q) { qs.push(Object.assign({}, q)); });
+      return qs;
+    }
+    document.getElementById("fx-start").addEventListener("click", function (e) {
+      e.target.hidden = true;
+      function startClock() {
+        t0 = Date.now(); clearInterval(iv);
+        iv = setInterval(function () { var s = Math.floor((Date.now() - t0) / 1000); document.getElementById("fx-time").textContent = Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }, 1000);
+      }
+      Bio.renderQuiz(document.getElementById("fx"), [], {
+        sample: function () { startClock(); return sample(); },
+        getBest: function () { return Bio.store.get().final; },
+        onScore: function (pct) {
+          clearInterval(iv);
+          Bio.store.update(function (s) { if (pct > (s.final || 0)) s.final = pct; });
+          document.getElementById("fx-best").textContent = Bio.store.get().final + "%";
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

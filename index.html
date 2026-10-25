@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bio 101 | Interactive Biology Course</title>
+<meta name="description" content="A free, interactive 10-week introductory biology course: chemistry of life, cells, DNA, genetics, evolution and the human body, with readings, virtual labs, hands-on practicals and quizzes.">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/course.js"></script>
+</head>
+<body data-root="." data-page="home">
+<header id="site-header"></header>
+<main class="wrap">
+  <section class="hero">
+    <span class="pill">Free · Self-paced · 10 weeks</span>
+    <h1>Bio 101: Life, DNA & the Human Body</h1>
+    <p class="lead">An interactive introduction to biology. Start with atoms and water, work up through cells, energy, DNA and genetics, and finish with how your own body works. Every week has a reading, a set of key-term flashcards, hands-on virtual labs, a practical you can do at home, and a quiz.</p>
+    <div class="btn-row">
+      <a class="btn primary" id="cta" href="weeks/week-01.html">Start Week 1 →</a>
+      <a class="btn" href="#syllabus">View syllabus</a>
+      <a class="btn" href="progress.html">My progress</a>
+    </div>
+    <div style="max-width:480px">
+      <div class="small muted" id="overall-label">Course progress: 0%</div>
+      <div class="progress"><span id="overall-bar" style="width:0"></span></div>
+    </div>
+  </section>
+
+  <h2>How each week works</h2>
+  <ol class="steps">
+    <li><strong>Read</strong><br><span class="small muted">A 45–70 minute lesson with diagrams, "check yourself" questions and human-body connections.</span></li>
+    <li><strong>Review key terms</strong><br><span class="small muted">Flip through flashcards until you know every term.</span></li>
+    <li><strong>Virtual lab</strong><br><span class="small muted">Run simulations, collect data, and answer worksheet questions.</span></li>
+    <li><strong>Practical</strong><br><span class="small muted">A real experiment with household materials. Record data and analyze it.</span></li>
+    <li><strong>Quiz</strong><br><span class="small muted">Score 70%+ to pass. Retake as often as you like, with explanations for every answer.</span></li>
+  </ol>
+  <p class="small muted">Plan on roughly <strong>4–6 hours per week</strong>. Everything you type (notes, data, answers) is saved automatically in this browser. Back it up from <a href="progress.html">My Progress</a>.</p>
+
+  <h2 id="syllabus">Syllabus</h2>
+  <div class="grid" id="week-grid"></div>
+  <div class="grid" style="margin-top:16px">
+    <a class="card week-card" href="final-exam.html"><span class="num">After week 10</span><h3>Final Exam</h3><p>44 cumulative questions drawn from every week, plus integrative questions. Score 70% to pass.</p></a>
+    <a class="card week-card" href="weeks/week-10.html#capstone"><span class="num">Week 10</span><h3>Capstone: From Gene to Body</h3><p>Explain one human condition from DNA to cell to body to population, using everything you've learned.</p></a>
+    <a class="card week-card" href="glossary.html"><span class="num">Reference</span><h3>Glossary</h3><p>All ~180 key terms in one searchable list.</p></a>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h2>Grading</h2>
+      <p>This is a self-paced course, so grades are for your own motivation. Your gradebook on <a href="progress.html">My Progress</a> calculates them automatically:</p>
+      <table class="simple">
+        <tr><th>Component</th><th>Weight</th></tr>
+        <tr><td>Weekly quizzes (best score each week)</td><td>30%</td></tr>
+        <tr><td>Virtual labs (10)</td><td>15%</td></tr>
+        <tr><td>Practicals (10)</td><td>15%</td></tr>
+        <tr><td>Capstone project</td><td>15%</td></tr>
+        <tr><td>Final exam</td><td>25%</td></tr>
+      </table>
+      <p class="small">Finish with an overall grade of 70%+ <em>and</em> pass the final exam to unlock your printable certificate. 🎓</p>
+    </div>
+    <div>
+      <h2>Practical shopping list</h2>
+      <p class="small muted">Everything is cheap and easy to find. Most of it is probably already in your kitchen.</p>
+      <ul class="small">
+        <li><strong>Produce:</strong> red cabbage (W1), potatoes (W2, W3), strawberries (W5), optional fresh and canned pineapple (W2)</li>
+        <li><strong>Pantry:</strong> salt, sugar, baking soda, vinegar, lemon juice, active dry yeast (W4), dry beans, rice and pasta (W8), gelatin (optional)</li>
+        <li><strong>Pharmacy:</strong> 3% hydrogen peroxide (W2), 70–91% rubbing alcohol (W5)</li>
+        <li><strong>Household:</strong> dish soap, clear cups, zip-top bags, coffee filters, balloons, small plastic bottles, string, ruler, kitchen scale, coins, paper clips, utensils (spoon, fork, tweezers, clothespin), timer</li>
+      </ul>
+      <div class="callout safety small"><span class="callout-title">Safety first</span>Each practical lists its own safety notes. Have an adult help with boiling water and knives, never taste lab materials, and never mix bleach with other chemicals.</div>
+    </div>
+  </div>
+
+  <h2>Suggested weekly rhythm</h2>
+  <div class="table-scroll"><table class="simple">
+    <tr><th>Day 1</th><th>Day 2</th><th>Day 3</th><th>Day 4</th><th>Day 5</th></tr>
+    <tr><td>Overview + Reading (first half)</td><td>Reading (second half) + Flashcards</td><td>Virtual lab + worksheet</td><td>Practical + analysis</td><td>Flashcard review + Quiz</td></tr>
+  </table></div>
+
+  <h2>About this course</h2>
+  <p>Bio 101 follows the topics of a typical first-semester college or advanced high-school biology course, with extra emphasis on DNA and human biology. All simulations run in your browser with no accounts and no tracking. The free OpenStax <a href="https://openstax.org/details/books/biology-2e" target="_blank" rel="noopener"><em>Biology 2e</em></a> textbook is linked each week as optional companion reading, and <a href="https://openstax.org/details/books/anatomy-and-physiology-2e" target="_blank" rel="noopener"><em>Anatomy & Physiology 2e</em></a> is great if the human-body weeks leave you wanting more.</p>
+  <p class="small muted">Health-related content is educational and is not medical advice.</p>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var grid = document.getElementById("week-grid"), total = 0, next = null;
+    Bio.WEEKS.forEach(function (w) {
+      var p = Bio.weekProgress(w.n);
+      total += p;
+      if (next === null && p < 1) next = w.n;
+      var a = document.createElement("a");
+      a.className = "card week-card";
+      a.href = "weeks/week-" + String(w.n).padStart(2, "0") + ".html";
+      a.innerHTML = '<span class="num">Week ' + w.n + (p === 1 ? " · ✓ complete" : "") + "</span><h3>" + Bio.esc(w.title) + "</h3><p>" + Bio.esc(w.blurb) + '</p><div class="progress"><span style="width:' + Math.round(p * 100) + '%"></span></div>';
+      grid.appendChild(a);
+    });
+    var pct = Math.round((total / Bio.WEEKS.length) * 100);
+    document.getElementById("overall-bar").style.width = pct + "%";
+    document.getElementById("overall-label").textContent = "Course progress: " + pct + "% of weekly activities";
+    var cta = document.getElementById("cta");
+    if (total > 0 && next) { cta.href = "weeks/week-" + String(next).padStart(2, "0") + ".html"; cta.textContent = "Continue with Week " + next + " →"; }
+    else if (!next) { cta.href = "final-exam.html"; cta.textContent = "All weeks done! Take the Final Exam →"; }
+  });
+</script>
+</body>
+</html>

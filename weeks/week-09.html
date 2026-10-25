@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 9 · The Human Body I: Control Systems | Bio 101</title>
+<meta name="description" content="Bio 101 Week 9: tissues, homeostasis, the nervous system, hormones, muscles and bones.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week09.js"></script>
+</head>
+<body data-root=".." data-week="9">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 9 of 10</div>
+    <h1>The Human Body I: Control Systems</h1>
+    <p>Now we zoom out from cells to you. How do trillions of cells coordinate to keep your temperature, blood sugar and posture just right? This week covers the body's organization and its two great control systems, nerves and hormones, along with the muscles and bones they command.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Describe the four tissue types and the levels of body organization.</li>
+          <li>Explain homeostasis using negative and positive feedback loops.</li>
+          <li>Explain how neurons generate and transmit signals (resting potential, action potential, synapse).</li>
+          <li>Describe the organization of the nervous system and the functions of major brain regions.</li>
+          <li>Explain how hormones work, using insulin/glucagon and the stress response as examples.</li>
+          <li>Describe bone structure, muscle types and the sliding filament model.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~60 min)</li>
+          <li data-item="lab">Virtual labs: Reaction time, Action potential, Blood sugar (~60 min)</li>
+          <li data-item="practical">Practical: Ruler-drop reflexes & touch sensitivity (~40 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/33-introduction" target="_blank" rel="noopener">Ch. 33 The Animal Body</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/35-introduction" target="_blank" rel="noopener">Ch. 35 The Nervous System</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/37-introduction" target="_blank" rel="noopener">Ch. 37 The Endocrine System</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/38-introduction" target="_blank" rel="noopener">Ch. 38 The Musculoskeletal System</a>.
+          For deeper human detail, see OpenStax <a href="https://openstax.org/details/books/anatomy-and-physiology-2e" target="_blank" rel="noopener"><em>Anatomy & Physiology 2e</em></a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> a 30 cm (12-inch) ruler, a helper, 2 paper clips and a millimeter ruler.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. How the body is organized</h2>
+      <p>Your body is built in levels: <strong>cells → tissues → organs → organ systems → organism</strong>. A <strong>tissue</strong> is a group of similar cells doing a shared job. Despite the body's complexity, there are only four basic tissue types:</p>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Tissue</th><th>Job</th><th>Examples</th></tr>
+        <tr><td><strong>Epithelial</strong></td><td>Covers, lines, protects, secretes, absorbs</td><td>Skin's outer layer, lining of gut and lungs, glands</td></tr>
+        <tr><td><strong>Connective</strong></td><td>Supports, connects, stores, transports</td><td>Bone, cartilage, tendons, fat, <em>blood</em></td></tr>
+        <tr><td><strong>Muscle</strong></td><td>Contracts to produce movement</td><td>Skeletal (voluntary), cardiac (heart), smooth (gut, blood vessels)</td></tr>
+        <tr><td><strong>Nervous</strong></td><td>Senses, processes and transmits signals</td><td>Brain, spinal cord, nerves</td></tr>
+      </table></div>
+      <p>Organs combine several tissues. Your stomach has epithelium lining it, smooth muscle churning it, connective tissue holding it together and nerves controlling it. Organs work together in <strong>organ systems</strong>: nervous, endocrine, musculoskeletal, cardiovascular, respiratory, digestive, urinary, immune/lymphatic, integumentary (skin) and reproductive.</p>
+
+      <h2>2. Homeostasis and feedback</h2>
+      <p><strong>Homeostasis</strong> is the maintenance of a stable internal environment despite a changing world. Body temperature stays near 37 °C, blood glucose near 70–100 mg/dL when fasting, and blood pH near 7.4. Most homeostasis uses <strong>negative feedback</strong>, a loop that <em>reverses</em> a change:</p>
+      <ol>
+        <li><strong>Stimulus:</strong> a variable drifts from its set point (body temperature rises).</li>
+        <li><strong>Sensor/receptor:</strong> detects the change (temperature receptors in skin and brain).</li>
+        <li><strong>Control center:</strong> compares the value to the set point and decides on a response (the hypothalamus).</li>
+        <li><strong>Effector:</strong> carries out the response (sweat glands secrete, and skin blood vessels dilate).</li>
+        <li><strong>Response:</strong> temperature falls back toward the set point, and the signal shuts off.</li>
+      </ol>
+      <p>Your home thermostat works the same way. When you're cold, the loop runs in reverse: blood vessels constrict, you shiver (muscle contractions generate heat), and you get goosebumps, a leftover from furrier ancestors.</p>
+      <p><strong>Positive feedback</strong> <em>amplifies</em> a change until some endpoint is reached. It's rarer and always self-limiting. Examples: during childbirth, oxytocin causes contractions, which trigger more oxytocin, until the baby is born. In blood clotting, activated platelets recruit more platelets until the wound is sealed.</p>
+
+      <h2>3. The nervous system: fast electrical control</h2>
+      <h3>Neurons</h3>
+      <p>The basic unit is the <strong>neuron</strong>. <em>Dendrites</em> receive signals, the <em>cell body</em> integrates them, and a long <em>axon</em> sends the signal on, sometimes over a meter, from your spine to your toes. Supporting <em>glial cells</em> nourish, protect and insulate neurons. Your brain has about 86 billion neurons and a similar number of glia.</p>
+      <h3>Resting potential</h3>
+      <p>A resting neuron is like a charged battery. The <strong>Na⁺/K⁺ pump</strong> (Week 3) keeps Na⁺ high outside and K⁺ high inside, and the inside sits at about <strong>−70 mV</strong> relative to the outside.</p>
+      <h3>The action potential</h3>
+      <p>When incoming signals push the membrane to the <strong>threshold</strong> (about −55 mV), voltage-gated channels open in sequence:</p>
+      <ol>
+        <li><strong>Depolarization:</strong> Na⁺ channels open, and Na⁺ rushes in. The inside shoots up to about +30 mV.</li>
+        <li><strong>Repolarization:</strong> Na⁺ channels close and K⁺ channels open. K⁺ flows out and the voltage falls.</li>
+        <li><strong>Hyperpolarization:</strong> it briefly overshoots below −70 mV, then the pump restores the resting state. During this <em>refractory period</em> the neuron can't fire again, so impulses travel in only one direction.</li>
+      </ol>
+      <figure>
+        <svg viewBox="0 0 420 210" width="420" role="img" aria-label="Graph of an action potential: resting at minus 70, threshold at minus 55, peak at plus 30, undershoot below minus 70">
+          <g font-family="system-ui" font-size="11" fill="currentColor">
+            <line x1="50" y1="15" x2="50" y2="190" stroke="currentColor"/><line x1="50" y1="190" x2="410" y2="190" stroke="currentColor"/>
+            <text x="44" y="38" text-anchor="end">+30</text><text x="44" y="98" text-anchor="end">0</text><text x="44" y="149" text-anchor="end">−55</text><text x="44" y="166" text-anchor="end">−70</text>
+            <line x1="50" y1="146" x2="410" y2="146" stroke="#d0661c" stroke-dasharray="4 4"/><text x="408" y="141" text-anchor="end" fill="#d0661c">threshold</text>
+            <path d="M50 162 L150 162 L170 146 L195 35 L230 175 L270 170 L310 162 L410 162" fill="none" stroke="#0f7b62" stroke-width="3"/>
+            <text x="120" y="70">Na⁺ in ↑</text><text x="222" y="70">K⁺ out ↓</text><text x="236" y="188">undershoot</text><text x="78" y="180">resting</text>
+            <text x="230" y="205" text-anchor="middle">time (≈ 2–3 ms) →</text>
+          </g>
+        </svg>
+        <figcaption>Figure 9.1: The action potential. Every spike from a given neuron is the same size: all or none.</figcaption>
+      </figure>
+      <p>Action potentials are <strong>all-or-none</strong>: either threshold is reached and a full-size spike fires, or nothing happens. A stronger stimulus makes a neuron fire more <em>often</em>, not more strongly. The spike regenerates itself along the axon. Fatty <strong>myelin</strong> insulation lets it jump between gaps (nodes of Ranvier), reaching speeds of up to ~120 m/s. In multiple sclerosis, the immune system attacks myelin and signals slow or fail.</p>
+      <h3>Synapses</h3>
+      <p>Neurons don't touch. At a <strong>synapse</strong>, the arriving action potential causes the axon terminal to release <strong>neurotransmitters</strong> from vesicles by exocytosis. They diffuse across a ~20 nm gap and bind receptors on the next cell, exciting or inhibiting it. Examples include acetylcholine (muscle contraction), dopamine (reward, movement; lost in Parkinson's disease), serotonin (mood) and GABA (the main inhibitory transmitter). Many drugs act here: SSRI antidepressants block serotonin reuptake, caffeine blocks adenosine receptors, and nicotine mimics acetylcholine.</p>
+      <h3>Organization</h3>
+      <ul>
+        <li><strong>Central nervous system (CNS):</strong> the brain and spinal cord, which integrate information.</li>
+        <li><strong>Peripheral nervous system (PNS):</strong> nerves throughout the body. It has a <em>somatic</em> division (voluntary control of skeletal muscle) and an <em>autonomic</em> division (involuntary control). The autonomic division is split into the <strong>sympathetic</strong> ("fight or flight": faster heart, dilated pupils, digestion paused) and <strong>parasympathetic</strong> ("rest and digest") systems.</li>
+      </ul>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Brain region</th><th>Main functions</th></tr>
+        <tr><td>Cerebrum (cerebral cortex)</td><td>Thought, language, memory, voluntary movement, senses. Frontal lobes handle planning and personality.</td></tr>
+        <tr><td>Cerebellum</td><td>Coordination, balance, fine-tuning movements</td></tr>
+        <tr><td>Brainstem (medulla, pons, midbrain)</td><td>Breathing, heart rate, blood pressure, swallowing</td></tr>
+        <tr><td>Hypothalamus</td><td>Homeostasis: temperature, hunger, thirst, sleep. Controls the pituitary gland.</td></tr>
+        <tr><td>Hippocampus / amygdala</td><td>Forming memories / processing fear and emotion</td></tr>
+      </table></div>
+      <p>A <strong>reflex arc</strong> skips the brain for speed: receptor → sensory neuron → spinal cord interneuron → motor neuron → muscle. That's why you jerk your hand off a hot stove <em>before</em> you feel the pain.</p>
+
+      <h2>4. The endocrine system: slower chemical control</h2>
+      <p><strong>Hormones</strong> are chemical messengers secreted by endocrine glands into the blood. They reach every cell but affect only <em>target cells</em> with the matching receptor. Compared with nerves, hormones act more slowly but their effects last longer. Steroid hormones (made from cholesterol) pass through membranes and alter gene expression directly. Protein hormones bind surface receptors and trigger signaling cascades inside the cell.</p>
+      <ul>
+        <li>The <strong>hypothalamus</strong> and <strong>pituitary</strong> ("master gland") direct many other glands: thyroid (metabolism), adrenal glands (stress), gonads (reproduction) and growth.</li>
+        <li><strong>Blood sugar:</strong> after a meal, rising glucose triggers beta cells in the <strong>pancreas</strong> to release <strong>insulin</strong>. Body cells take up glucose, and the liver stores it as glycogen. Between meals, alpha cells release <strong>glucagon</strong>, and the liver releases glucose. This is a negative feedback pair you'll model in Lab 9C.</li>
+        <li><strong>Stress:</strong> the adrenal glands release <em>adrenaline</em> (seconds: racing heart, energy release) and <em>cortisol</em> (hours: raises blood sugar, suppresses inflammation). Chronic high cortisol harms sleep, immunity and blood pressure.</li>
+      </ul>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: diabetes</span>
+        <p><strong>Type 1 diabetes</strong> is autoimmune: the immune system destroys insulin-producing beta cells, so patients need insulin for life. <strong>Type 2 diabetes</strong>, about 90–95% of cases, starts with <em>insulin resistance</em>: cells stop responding well, the pancreas overworks, and blood glucose creeps up. It's strongly influenced by genetics, weight, activity and diet, and can often be prevented or managed with exercise, nutrition and medication. Over time, high blood sugar damages blood vessels, nerves, kidneys and eyes.</p>
+      </div>
+
+      <h2>5. Muscles and bones</h2>
+      <h3>The skeleton</h3>
+      <p>An adult has 206 bones. They support the body, protect organs, anchor muscles, store calcium and phosphate, and house <strong>red bone marrow</strong>, which makes about 2–3 million new red blood cells every second. Bone is living connective tissue: <strong>osteoblasts</strong> build it and <strong>osteoclasts</strong> break it down, remodeling about 10% of your skeleton each year. Weight-bearing exercise strengthens bone, and its loss with age (osteoporosis) increases fracture risk. Joints, cartilage, ligaments (bone to bone) and tendons (muscle to bone) enable movement.</p>
+      <h3>Muscle</h3>
+      <p>There are three muscle types: <strong>skeletal</strong> (voluntary, striped), <strong>cardiac</strong> (involuntary, striped, only in the heart) and <strong>smooth</strong> (involuntary, in organ and blood-vessel walls). Skeletal muscle fibers are packed with repeating contractile units called <strong>sarcomeres</strong>, made of thin <strong>actin</strong> and thick <strong>myosin</strong> filaments.</p>
+      <p><strong>Sliding filament model:</strong> a motor neuron releases acetylcholine → the muscle fiber fires an action potential → Ca²⁺ is released inside the cell → Ca²⁺ exposes binding sites on actin → myosin heads grab actin and pull, powered by ATP → filaments slide past each other and the sarcomere shortens. The filaments themselves don't shrink. Muscles can only <em>pull</em>, so they work in opposing pairs (biceps bends the elbow, triceps straightens it). After death, ATP runs out and myosin stays locked onto actin, causing <em>rigor mortis</em>.</p>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>There are four tissue types: epithelial, connective, muscle and nervous. Body organization runs cells → tissues → organs → systems.</li>
+          <li>Homeostasis relies mostly on negative feedback (stimulus → sensor → control center → effector → response).</li>
+          <li>Neurons rest at −70 mV and fire all-or-none action potentials (Na⁺ in, then K⁺ out). Synapses use neurotransmitters.</li>
+          <li>Hormones travel in blood to target cells. Insulin and glucagon keep blood sugar balanced.</li>
+          <li>Bone is living and constantly remodeled. Muscles contract as myosin pulls actin, powered by ATP and triggered by Ca²⁺.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="reaction"></div>
+    <div data-lab="neuron"></div>
+    <div data-lab="glucose"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Ruler-Drop Reaction Time & Touch Sensitivity</h2>
+    <h3>Part A: Ruler-drop reaction time</h3>
+    <p>Gravity is a perfect timer. A falling ruler accelerates at g = 9.8 m/s², so the distance it falls before you catch it tells you your reaction time: <strong>t = √(2d ÷ g)</strong>, where d is in meters.</p>
+    <ol>
+      <li>Your helper holds a 30 cm ruler vertically, with the 0 cm mark between your open thumb and finger (not touching).</li>
+      <li>Without warning, they drop it. Catch it as fast as you can, and record the cm mark at the top of your fingers.</li>
+      <li>Do 5 trials with your dominant hand and 5 with your non-dominant hand.</li>
+      <li>Convert: e.g., 15 cm = 0.15 m → t = √(0.30 ÷ 9.8) = 0.175 s = 175 ms.</li>
+    </ol>
+    <div class="card small">
+      <strong>Quick converter:</strong> <input type="number" id="w9-cm" placeholder="cm" style="width:90px" aria-label="Distance in centimeters"> cm → <strong id="w9-ms">—</strong> ms
+    </div>
+    <table class="datatable" data-id="w9pa" data-cols='["Trial","Dominant: distance (cm)","Dominant: time (ms)","Non-dominant: distance (cm)","Non-dominant: time (ms)"]' data-rows='["1","2","3","4","5","Average"]'></table>
+    <h3>Part B: Two-point discrimination</h3>
+    <p>Your skin's touch receptors aren't evenly spread. Unfold 2 paper clips into U shapes with the tips set at 2 mm, 5 mm, 10 mm, 20 mm and 40 mm apart. With your eyes closed, have your helper touch either one or both tips <em>gently</em> to each body area in random order. Record the smallest separation at which you reliably feel <strong>two</strong> points.</p>
+    <table class="datatable" data-id="w9pb" data-cols='["Body area","Smallest distance felt as two points (mm)","Notes"]' data-rows='["Fingertip","Palm","Back of hand","Forearm","Back of neck / shoulder","Lip (optional)"]'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w9pa1">1. Compare your ruler reaction time with your Lab 9A computer reaction time. Which was faster and why might they differ?</label><textarea id="w9pa1" data-note="w9p-a1"></textarea></div>
+    <div class="field"><label for="w9pa2">2. Was your dominant hand faster? Suggest a reason based on practice and neural pathways.</label><textarea id="w9pa2" data-note="w9p-a2"></textarea></div>
+    <div class="field"><label for="w9pa3">3. Which areas were most sensitive in Part B? Relate this to receptor density and to how much brain area is devoted to each body part (the "sensory homunculus").</label><textarea id="w9pa3" data-note="w9p-a3"></textarea></div>
+    <div class="field"><label for="w9pa4">4. Bonus reflex test: sit with legs dangling and have a helper tap gently just below your kneecap. Describe the reflex arc involved and why it's faster than your ruler catch.</label><textarea id="w9pa4" data-note="w9p-a4"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 9 Quiz</h2>
+    <div class="quiz" data-quiz="9"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var cm = document.getElementById("w9-cm"), out = document.getElementById("w9-ms");
+    cm.addEventListener("input", function () {
+      var d = parseFloat(cm.value) / 100;
+      out.textContent = d > 0 ? Math.round(Math.sqrt((2 * d) / 9.8) * 1000) : "—";
+    });
+  });
+</script>
+</body>
+</html>

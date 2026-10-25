@@ -180,7 +180,7 @@
   function bindComplete() {
     const week = +document.body.dataset.week;
     if (!week) return;
-    const labels = { reading: "reading", lab: "virtual lab", practical: "practical" };
+    const labels = { reading: "reading", lab: "virtual lab", practical: "practical", capstone: "capstone project" };
     function render() {
       const w = Bio.store.week(week);
       Bio.$$("[data-complete]").forEach((b) => {
@@ -385,6 +385,7 @@
     }
     function fmt(v) {
       const a = Math.abs(v);
+      if (a >= 1e6) return v.toExponential(1).replace("e+", "e");
       if (a >= 1000) return Math.round(v).toLocaleString();
       if (a >= 10 || v === 0) return String(Math.round(v * 10) / 10);
       return String(Math.round(v * 100) / 100);

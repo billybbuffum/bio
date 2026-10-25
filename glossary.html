@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary | Bio 101</title>
+<meta name="description" content="Searchable glossary of every key term in Bio 101.">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/data/terms.js"></script>
+<script defer src="assets/js/course.js"></script>
+</head>
+<body data-root="." data-page="glossary">
+<header id="site-header"></header>
+<main class="wrap narrow">
+  <h1 style="margin-top:1.2em">Glossary</h1>
+  <p class="muted">Every key term from the course. Search by word or definition, or filter by week.</p>
+  <div class="btn-row">
+    <input type="text" id="g-q" placeholder="Search terms…" aria-label="Search terms" style="flex:1;min-width:200px">
+    <select id="g-w" aria-label="Filter by week"><option value="">All weeks</option></select>
+  </div>
+  <p class="small muted" id="g-n"></p>
+  <div id="g-list"></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var all = [];
+    Object.keys(Bio.TERMS).forEach(function (w) { Bio.TERMS[w].forEach(function (t) { all.push({ t: t.t, d: t.d, w: +w }); }); });
+    all.sort(function (a, b) { return a.t.localeCompare(b.t); });
+    var sel = document.getElementById("g-w");
+    Bio.WEEKS.forEach(function (w) { sel.insertAdjacentHTML("beforeend", '<option value="' + w.n + '">Week ' + w.n + ": " + Bio.esc(w.title) + "</option>"); });
+    function render() {
+      var q = document.getElementById("g-q").value.trim().toLowerCase(), wk = sel.value;
+      var items = all.filter(function (x) { return (!wk || x.w === +wk) && (!q || (x.t + " " + x.d).toLowerCase().indexOf(q) >= 0); });
+      document.getElementById("g-n").textContent = items.length + " of " + all.length + " terms";
+      document.getElementById("g-list").innerHTML = items.map(function (x) {
+        return '<div class="gloss-item"><b>' + Bio.esc(x.t) + '</b> <a class="pill" href="weeks/week-' + String(x.w).padStart(2, "0") + '.html#reading">Week ' + x.w + "</a><div>" + Bio.esc(x.d) + "</div></div>";
+      }).join("") || '<p class="muted">No matching terms.</p>';
+    }
+    document.getElementById("g-q").addEventListener("input", render);
+    sel.addEventListener("change", render);
+    render();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Progress | Bio 101</title>
+<meta name="description" content="Your Bio 101 gradebook, backups and certificate.">
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/course.js"></script>
+</head>
+<body data-root="." data-page="progress">
+<header id="site-header"></header>
+<main class="wrap">
+  <h1 style="margin-top:1.2em">My Progress</h1>
+  <p class="muted">Your gradebook updates automatically as you complete activities. Everything is stored only in this browser on this device.</p>
+
+  <div class="readout" id="summary"></div>
+
+  <h2>Gradebook</h2>
+  <div class="table-scroll"><table class="simple" id="gb"></table></div>
+
+  <h2>Back up or move your work</h2>
+  <p class="small muted">Browser storage can be cleared (for example by private browsing or clearing site data). Download a backup now and then, and import it on another device to continue there.</p>
+  <div class="btn-row">
+    <button class="btn primary" id="exp">⬇ Download backup (.json)</button>
+    <label class="btn" for="imp">⬆ Import backup</label><input type="file" id="imp" accept="application/json,.json" hidden>
+    <button class="btn" id="nb">📓 Download my notebook (.txt)</button>
+    <button class="btn" id="reset" style="color:var(--bad)">Reset all progress</button>
+  </div>
+  <p class="feedback" id="msg"></p>
+
+  <h2>Certificate</h2>
+  <div id="cert-area"></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var W = { quiz: 30, lab: 15, practical: 15, capstone: 15, final: 25 };
+    function compute() {
+      var s = Bio.store.get(), weeks = s.weeks || {}, q = 0, l = 0, p = 0, rows = "";
+      Bio.WEEKS.forEach(function (w) {
+        var d = weeks[w.n] || {}, att = (s.attempts || {})[w.n] || 0;
+        q += d.quiz || 0; l += d.lab ? 1 : 0; p += d.practical ? 1 : 0;
+        var tick = function (v) { return v ? '<span style="color:var(--good)">✓</span>' : '<span class="muted">—</span>'; };
+        rows += "<tr><td><a href='weeks/week-" + String(w.n).padStart(2, "0") + ".html'>Week " + w.n + ": " + Bio.esc(w.title) + "</a></td><td>" + tick(d.reading) + "</td><td>" + tick(d.lab) + "</td><td>" + tick(d.practical) + "</td><td>" +
+          (d.quiz != null ? '<strong style="color:' + (d.quiz >= 70 ? "var(--good)" : "var(--warn)") + '">' + d.quiz + "%</strong>" : '<span class="muted">—</span>') + "</td><td>" + att + "</td><td>" + Math.round(Bio.weekProgress(w.n) * 100) + "%</td></tr>";
+      });
+      var cap = (weeks[10] || {}).capstone ? 100 : 0, fin = s.final || 0;
+      var parts = { quiz: q / 10, lab: l * 10, practical: p * 10, capstone: cap, final: fin };
+      var overall = Object.keys(W).reduce(function (a, k) { return a + (parts[k] * W[k]) / 100; }, 0);
+      return { rows: rows, parts: parts, overall: Math.round(overall), final: s.final, cap: cap, s: s };
+    }
+    function letter(x) { return x >= 90 ? "A" : x >= 80 ? "B" : x >= 70 ? "C" : x >= 60 ? "D" : "—"; }
+    function render() {
+      var c = compute();
+      document.getElementById("gb").innerHTML = "<tr><th>Week</th><th>Reading</th><th>Lab</th><th>Practical</th><th>Best quiz</th><th>Attempts</th><th>Week progress</th></tr>" + c.rows +
+        "<tr><td><a href='weeks/week-10.html#capstone'>Capstone project</a></td><td colspan='6'>" + (c.cap ? "✓ Complete" : "Not yet marked complete") + "</td></tr>" +
+        "<tr><td><a href='final-exam.html'>Final exam</a></td><td colspan='6'>" + (c.final != null ? "<strong>" + c.final + "%</strong> best" : "Not attempted") + "</td></tr>";
+      document.getElementById("summary").innerHTML =
+        '<div><b>' + c.overall + '% ' + letter(c.overall) + '</b><span>Overall grade</span></div>' +
+        '<div><b>' + Math.round(c.parts.quiz) + '%</b><span>Quiz average (30%)</span></div>' +
+        '<div><b>' + c.parts.lab + '%</b><span>Virtual labs (15%)</span></div>' +
+        '<div><b>' + c.parts.practical + '%</b><span>Practicals (15%)</span></div>' +
+        '<div><b>' + c.parts.capstone + '%</b><span>Capstone (15%)</span></div>' +
+        '<div><b>' + (c.final != null ? c.final + "%" : "—") + '</b><span>Final exam (25%)</span></div>';
+      var area = document.getElementById("cert-area");
+      if (c.overall >= 70 && (c.final || 0) >= 70) {
+        var name = Bio.store.note("cert-name");
+        area.innerHTML = '<div class="field"><label for="cert-name">Name for your certificate</label><input type="text" id="cert-name" value="' + Bio.esc(name) + '" style="width:100%;max-width:400px"></div>' +
+          '<div class="certificate"><div class="pill">Certificate of Completion</div><h2>Bio 101: Life, DNA & the Human Body</h2><p>This certifies that</p><div class="name" id="cert-show">' + (Bio.esc(name) || "Your Name") + '</div>' +
+          '<p>has completed all ten weeks of readings, virtual labs, practicals and quizzes,<br>a capstone project, and the final exam, earning an overall grade of <strong>' + c.overall + '% (' + letter(c.overall) + ')</strong>.</p><p class="muted">' + new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }) + '</p></div>' +
+          '<div class="btn-row"><button class="btn primary" onclick="window.print()">🖨 Print certificate</button></div>';
+        document.getElementById("cert-name").addEventListener("input", function (e) { Bio.store.setNote("cert-name", e.target.value); document.getElementById("cert-show").textContent = e.target.value || "Your Name"; });
+      } else {
+        area.innerHTML = '<div class="card"><p>🎓 Your certificate unlocks when your <strong>overall grade is 70%+</strong> and you&rsquo;ve <strong>passed the final exam</strong> (70%+).</p><p class="small muted">Currently: overall ' + c.overall + '%, final ' + (c.final != null ? c.final + "%" : "not attempted") + '.</p></div>';
+      }
+    }
+    function download(name, text, type) {
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([text], { type: type }));
+      a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    }
+    var msg = document.getElementById("msg");
+    document.getElementById("exp").addEventListener("click", function () {
+      download("bio101-backup-" + new Date().toISOString().slice(0, 10) + ".json", JSON.stringify(Bio.store.get(), null, 2), "application/json");
+    });
+    document.getElementById("imp").addEventListener("change", function (e) {
+      var f = e.target.files[0]; if (!f) return;
+      var r = new FileReader();
+      r.onload = function () {
+        try {
+          var data = JSON.parse(r.result);
+          if (typeof data !== "object" || data === null || Array.isArray(data)) throw new Error("bad");
+          if (!confirm("Replace your current progress with this backup?")) return;
+          Bio.store.update(function (s) { Object.keys(s).forEach(function (k) { delete s[k]; }); Object.assign(s, data); });
+          msg.className = "feedback good"; msg.textContent = "✓ Backup imported.";
+          render();
+        } catch (err) { msg.className = "feedback bad"; msg.textContent = "That file doesn't look like a Bio 101 backup."; }
+      };
+      r.readAsText(f);
+      e.target.value = "";
+    });
+    document.getElementById("nb").addEventListener("click", function () {
+      var notes = Bio.store.get().notes || {}, keys = Object.keys(notes).filter(function (k) { return notes[k] && String(notes[k]).trim(); }).sort();
+      var out = "Bio 101 · My Lab Notebook\nExported " + new Date().toLocaleString() + "\n\n";
+      keys.forEach(function (k) { out += "[" + k + "]\n" + notes[k] + "\n\n"; });
+      if (!keys.length) out += "(No notes yet.)\n";
+      download("bio101-notebook.txt", out, "text/plain");
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      if (confirm("This permanently erases ALL progress, notes and data in this browser. Download a backup first if you might want it. Continue?")) {
+        Bio.store.update(function (s) { Object.keys(s).forEach(function (k) { delete s[k]; }); });
+        msg.className = "feedback"; msg.textContent = "Progress reset.";
+        render();
+      }
+    });
+    render();
+  });
+</script>
+</body>
+</html>
