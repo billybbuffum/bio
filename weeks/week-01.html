@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 1 · The Chemistry of Life | Bio 101</title>
+<meta name="description" content="Bio 101 Week 1: the scientific method, atoms, bonds, water and pH.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week01.js"></script>
+</head>
+<body data-root=".." data-week="1">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 1 of 10</div>
+    <h1>The Chemistry of Life</h1>
+    <p>Before we can understand DNA or the human heart, we need two tools: a way of asking questions (science) and a working knowledge of the atoms and water that all life is made of.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <p>By the end of this week you should be able to:</p>
+        <ol class="objectives">
+          <li>List the characteristics shared by all living things.</li>
+          <li>Design a controlled experiment and identify independent, dependent and controlled variables.</li>
+          <li>Explain the difference between a hypothesis and a scientific theory.</li>
+          <li>Describe atoms, isotopes, and ionic, covalent and hydrogen bonds.</li>
+          <li>Explain how water's polarity produces properties essential to life.</li>
+          <li>Use the pH scale and explain why buffers matter in the human body.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~45 min)</li>
+          <li data-item="lab">Virtual labs: pH Explorer + Experiment Designer (~45 min)</li>
+          <li data-item="practical">Practical: Red-cabbage pH indicator (~60 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70% (~15 min)</li>
+        </ul>
+        <div class="card small">
+          <strong>Companion reading (optional, free):</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/1-introduction" target="_blank" rel="noopener">Ch. 1 The Study of Life</a> and
+          <a href="https://openstax.org/books/biology-2e/pages/2-introduction" target="_blank" rel="noopener">Ch. 2 The Chemical Foundation of Life</a>.
+        </div>
+        <div class="card small"><strong>Get ready for the practical:</strong> red cabbage, a pot or kettle, clear cups or glasses, and household liquids such as vinegar, lemon juice, baking soda, and dish soap.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== READING ===================== -->
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. What does it mean to be alive?</h2>
+      <p>Biology is the study of life, but "life" turns out to be surprisingly hard to define in a single sentence. Instead, biologists recognize life by a set of shared properties. Every living thing, from a bacterium to a blue whale to you:</p>
+      <ul>
+        <li><strong>Is made of one or more cells</strong>, the smallest units that can carry out life's processes.</li>
+        <li><strong>Uses energy</strong> through metabolism, the chemical reactions that build and break down molecules.</li>
+        <li><strong>Maintains homeostasis</strong>, keeping its internal conditions stable (your body holds itself near 37 °C).</li>
+        <li><strong>Grows and develops</strong> following instructions encoded in DNA.</li>
+        <li><strong>Reproduces</strong> and passes genetic information to offspring.</li>
+        <li><strong>Responds to stimuli</strong> in its environment.</li>
+        <li><strong>Evolves</strong>: populations change over generations.</li>
+      </ul>
+      <p>Viruses are the classic edge case. They contain genetic material and evolve, but they cannot reproduce or metabolize outside a host cell, so most biologists don't consider them fully alive.</p>
+      <p>Biology is organized in levels, and this course climbs them: <strong>atoms → molecules → organelles → cells → tissues → organs → organ systems → organisms → populations → ecosystems</strong>. At each level new properties <em>emerge</em> that aren't present in the parts alone. A single water molecule isn't wet, and a single neuron can't think.</p>
+
+      <h2>2. How science works</h2>
+      <p>Science is a method for finding out what's true while guarding against fooling ourselves. A typical investigation looks like this:</p>
+      <ol>
+        <li><strong>Observation:</strong> noticing something that needs explaining.</li>
+        <li><strong>Question:</strong> "Why does this happen?"</li>
+        <li><strong>Hypothesis:</strong> a <em>testable</em> and <em>falsifiable</em> explanation, often phrased as "<em>If</em> … <em>then</em> …".</li>
+        <li><strong>Experiment:</strong> a fair test that changes one thing at a time.</li>
+        <li><strong>Analysis:</strong> do the data support or refute the hypothesis?</li>
+        <li><strong>Communication & replication:</strong> other scientists repeat the work to see if it holds up.</li>
+      </ol>
+      <p>A fair experiment has three kinds of variables:</p>
+      <ul>
+        <li>The <strong>independent variable</strong> is the one thing <em>you</em> change on purpose.</li>
+        <li>The <strong>dependent variable</strong> is what you <em>measure</em> to see the effect.</li>
+        <li><strong>Controlled variables</strong> are everything else, which you keep the same so they can't explain your result.</li>
+      </ul>
+      <p>A <strong>control group</strong> receives no treatment (or a placebo) and gives you a baseline. Without one, you can't tell whether your treatment did anything at all.</p>
+
+      <div class="callout human"><span class="callout-title">🫀 Human connection: the doctor who said "wash your hands"</span>
+        <p>In 1847, Ignaz Semmelweis noticed that women in one Vienna maternity ward died of fever far more often than in another. The difference was that doctors in the deadly ward came straight from performing autopsies. He hypothesized that "cadaverous particles" on their hands caused the disease, and required handwashing with chlorinated lime. Deaths dropped dramatically. Germ theory explained <em>why</em> only decades later, but his controlled comparison saved lives first.</p>
+      </div>
+
+      <p><strong>Sample size matters.</strong> Living things vary. If you test one plant per group, a single unusually healthy plant could fool you. Larger samples and repeated trials let real effects stand out from random noise. You'll see this for yourself in the Virtual Lab.</p>
+      <p><strong>Hypothesis vs. theory.</strong> In everyday speech, "it's just a theory" means "it's a guess." In science, a <strong>theory</strong> is the opposite: a broad explanation supported by an enormous body of evidence from many independent lines of investigation. Cell theory, germ theory, the theory of evolution and atomic theory are among the best-supported ideas humans have.</p>
+
+      <details class="check"><summary>A study finds that people who drink more coffee live longer. Does coffee cause longer life?</summary>
+        <p>Not necessarily! This is a <em>correlation</em>. Coffee drinkers might differ in other ways, such as income or health habits. These are <em>confounding variables</em>. Only a controlled experiment, or very careful statistical analysis, can establish causation.</p>
+      </details>
+
+      <h2>3. Atoms: the elements of life</h2>
+      <p>All matter is made of <strong>atoms</strong>. Each atom has a tiny nucleus containing positively charged <strong>protons</strong> and neutral <strong>neutrons</strong>, surrounded by a cloud of negatively charged <strong>electrons</strong>. The number of protons defines the element: carbon always has 6, oxygen always has 8.</p>
+      <p>Atoms of the same element with different numbers of neutrons are <strong>isotopes</strong>. Carbon-12 (6 neutrons) is stable, while carbon-14 (8 neutrons) is radioactive and decays at a steady rate, which lets scientists date ancient remains. In medicine, radioactive isotopes power PET scans and some cancer treatments.</p>
+      <p>Just six elements, often remembered as <strong>CHNOPS</strong>, make up about 98% of your body mass:</p>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Element</th><th>% of body mass</th><th>Where you find it</th></tr>
+        <tr><td>Oxygen (O)</td><td>~65%</td><td>Water, every biomolecule</td></tr>
+        <tr><td>Carbon (C)</td><td>~18%</td><td>The backbone of all organic molecules</td></tr>
+        <tr><td>Hydrogen (H)</td><td>~10%</td><td>Water, organic molecules</td></tr>
+        <tr><td>Nitrogen (N)</td><td>~3%</td><td>Proteins, DNA</td></tr>
+        <tr><td>Calcium (Ca)</td><td>~1.5%</td><td>Bones, teeth, muscle and nerve signaling</td></tr>
+        <tr><td>Phosphorus (P)</td><td>~1%</td><td>DNA, ATP, bones, cell membranes</td></tr>
+      </table></div>
+      <p>Carbon is special because it can form four strong bonds, letting it build chains, rings and branches. That versatility is why life on Earth is carbon-based.</p>
+
+      <h2>4. Chemical bonds</h2>
+      <p>Atoms bond to fill their outer electron shells. Three kinds of bond matter most in biology:</p>
+      <ul>
+        <li><strong>Covalent bonds</strong> form when atoms <em>share</em> electrons. They are strong and hold molecules together. When the sharing is unequal, the bond is <strong>polar</strong> and each end carries a partial charge (δ⁺ or δ⁻).</li>
+        <li><strong>Ionic bonds</strong> form when one atom <em>transfers</em> electrons to another, creating oppositely charged ions that attract. Table salt (Na⁺Cl⁻) is the classic example. Ions such as Na⁺, K⁺, Ca²⁺ and Cl⁻ carry the electrical signals in your nerves and heart.</li>
+        <li><strong>Hydrogen bonds</strong> are weak attractions between a δ⁺ hydrogen and a δ⁻ atom (usually O or N) on another molecule. Each one is weak, but millions together are strong. They hold the two strands of DNA together and fold proteins into shape.</li>
+      </ul>
+
+      <figure>
+        <svg viewBox="0 0 420 200" width="420" role="img" aria-label="Two water molecules joined by a hydrogen bond">
+          <g font-family="system-ui" font-size="13">
+            <circle cx="110" cy="100" r="34" fill="#d9534f" opacity=".85"/><text x="110" y="105" text-anchor="middle" fill="#fff" font-weight="700">O</text>
+            <circle cx="66" cy="140" r="20" fill="#9fb3c8"/><text x="66" y="145" text-anchor="middle">H</text>
+            <circle cx="154" cy="140" r="20" fill="#9fb3c8"/><text x="154" y="145" text-anchor="middle">H</text>
+            <text x="110" y="52" text-anchor="middle" fill="currentColor">δ⁻</text>
+            <text x="40" y="172" fill="currentColor">δ⁺</text><text x="170" y="172" fill="currentColor">δ⁺</text>
+            <circle cx="300" cy="90" r="34" fill="#d9534f" opacity=".85"/><text x="300" y="95" text-anchor="middle" fill="#fff" font-weight="700">O</text>
+            <circle cx="350" cy="60" r="20" fill="#9fb3c8"/><text x="350" y="65" text-anchor="middle">H</text>
+            <circle cx="330" cy="135" r="20" fill="#9fb3c8"/><text x="330" y="140" text-anchor="middle">H</text>
+            <line x1="174" y1="138" x2="266" y2="98" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5"/>
+            <text x="218" y="105" text-anchor="middle" fill="currentColor" transform="rotate(-23 218 105)">hydrogen bond</text>
+          </g>
+        </svg>
+        <figcaption>Figure 1.1: Oxygen pulls shared electrons toward itself, making water polar. The δ⁺ hydrogen of one molecule is attracted to the δ⁻ oxygen of another.</figcaption>
+      </figure>
+
+      <h2>5. Water: the molecule of life</h2>
+      <p>You are about 60% water by weight. Life began in water, and every chemical reaction in your cells happens in it. Water's unusual properties all come from its <strong>polarity</strong> and the hydrogen bonds it forms:</p>
+      <ul>
+        <li><strong>Cohesion and adhesion.</strong> Water sticks to itself (cohesion, which creates surface tension) and to other surfaces (adhesion). Together they pull water up thin tubes, from roots to the tops of trees.</li>
+        <li><strong>High specific heat.</strong> Water absorbs a lot of heat before its temperature rises. Oceans moderate climate, and your watery body resists sudden temperature swings.</li>
+        <li><strong>Evaporative cooling.</strong> Evaporating water carries a lot of heat away. That's why sweating cools you.</li>
+        <li><strong>Ice floats.</strong> Hydrogen bonds lock ice into an open lattice that is less dense than liquid water. Lakes freeze from the top down, and the life below survives.</li>
+        <li><strong>The universal solvent.</strong> Water dissolves ionic and polar substances (sugars, salts, amino acids). Blood plasma is ~92% water and carries dissolved nutrients, hormones and wastes around your body. Molecules that dissolve in water are <strong>hydrophilic</strong>. Nonpolar molecules like oils are <strong>hydrophobic</strong> and clump together, a fact that will explain cell membranes in Week 3.</li>
+      </ul>
+
+      <details class="check"><summary>Why does a sweaty day feel worse when it's humid?</summary>
+        <p>In humid air, sweat evaporates slowly, so less heat leaves your skin. Evaporation, not sweating itself, is what cools you.</p>
+      </details>
+
+      <h2>6. Acids, bases and pH</h2>
+      <p>A tiny fraction of water molecules split into ions: H₂O ⇌ H⁺ + OH⁻. An <strong>acid</strong> adds H⁺ ions to a solution; a <strong>base</strong> removes them (or adds OH⁻). The <strong>pH scale</strong> measures H⁺ concentration:</p>
+      <p style="text-align:center"><strong>pH = −log₁₀[H⁺]</strong></p>
+      <p>The scale runs from 0 to 14. Pure water is neutral at pH 7, acids are below 7, and bases are above. Because the scale is <em>logarithmic</em>, each step is a <strong>10-fold</strong> change: pH 3 has 10 times more H⁺ than pH 4 and 100 times more than pH 5.</p>
+      <p>Your body runs on precise pH values. Stomach acid sits near pH 1.5–2 to kill microbes and activate digestive enzymes. The small intestine is slightly basic (~pH 8), and blood is held between <strong>7.35 and 7.45</strong>. Below that range is <em>acidosis</em> and above it is <em>alkalosis</em>; both can be fatal because proteins change shape when pH shifts.</p>
+      <p>What keeps blood so steady? <strong>Buffers</strong>, chemicals that soak up excess H⁺ or release it when needed. The main blood buffer is the carbonic acid–bicarbonate system:</p>
+      <p style="text-align:center">CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻</p>
+      <p>Your lungs and kidneys tune this system constantly. Breathe faster and you blow off CO₂, which pulls the reaction left and raises pH. This links chemistry directly to your respiratory system (Week 10).</p>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>Life is recognized by a set of properties: cells, metabolism, homeostasis, growth, reproduction, response and evolution.</li>
+          <li>Good experiments change one variable, measure another, control the rest, include a control group, and use enough samples.</li>
+          <li>Life is mostly C, H, N, O, P and S, held together by covalent, ionic and hydrogen bonds.</li>
+          <li>Water's polarity gives it cohesion, high specific heat, evaporative cooling, floating ice and solvent power.</li>
+          <li>pH is logarithmic, and buffers keep blood at pH ~7.4.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <!-- ===================== FLASHCARDS ===================== -->
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <p class="muted">Click the card (or press Space) to flip it. Mark cards you know to shrink the deck until you've mastered them all.</p>
+    <div class="flashcards"></div>
+  </section>
+
+  <!-- ===================== LAB ===================== -->
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <p class="muted">Complete both simulations and answer the worksheet questions. Your answers save automatically.</p>
+    <div data-lab="ph"></div>
+    <div data-lab="experiment"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <!-- ===================== PRACTICAL ===================== -->
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Make a Red-Cabbage pH Indicator</h2>
+    <p>Red cabbage contains <strong>anthocyanin</strong> pigments that change shape, and therefore color, depending on pH. You'll extract them and use them to test the acidity of things in your kitchen.</p>
+    <div class="callout safety"><span class="callout-title">⚠️ Safety</span>
+      Have an adult nearby when using boiling water. Never mix bleach with vinegar or ammonia, because it releases toxic gas; test bleach only on its own, or skip it. Don't taste anything. Wash your hands afterward.</div>
+    <div class="two-col">
+      <div>
+        <h3>Materials</h3>
+        <ul>
+          <li>¼ red cabbage, chopped</li>
+          <li>Hot water (about 2 cups) and a pot, kettle or heat-proof bowl</li>
+          <li>Strainer</li>
+          <li>6–10 clear cups or glasses, or a white ice-cube tray</li>
+          <li>Spoon, marker and labels</li>
+          <li>Test substances: vinegar, lemon juice, baking soda dissolved in water, tap water, milk, dish soap, a soda, antacid tablet in water, laundry detergent in water</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Procedure</h3>
+        <ol>
+          <li>Pour hot (not quite boiling) water over the chopped cabbage. Let it steep 10–15 min until the water is deep purple.</li>
+          <li>Strain the liquid. This is your <strong>indicator</strong>. Let it cool.</li>
+          <li>Pour equal amounts (about 3 tablespoons) into each cup, and label the cups.</li>
+          <li><strong>Before testing</strong>, write a prediction for each substance: acid, neutral or base?</li>
+          <li>Add 1 spoonful of each substance to its own cup. Keep one cup of plain indicator as your <strong>control</strong>.</li>
+          <li>Record the color, then use the color chart in the Virtual Lab (red-cabbage swatch) to estimate pH.</li>
+          <li><em>Bonus:</em> to a cup that turned pink from vinegar, slowly add baking-soda solution. What happens?</li>
+        </ol>
+      </div>
+    </div>
+    <div class="card small">
+      <strong>Red-cabbage color key (approximate):</strong> red (pH 1–2) · pink/magenta (3–4) · purple (5–7) · blue (8) · blue-green (9–10) · green (11–12) · yellow (13–14)
+    </div>
+    <h3>Data table</h3>
+    <table class="datatable" data-id="w1p" data-cols='["Substance","Prediction (acid/neutral/base)","Color observed","Estimated pH"]' data-rows='["Control (indicator only)","Vinegar","Lemon juice","Baking soda solution","Tap water","Milk","Dish soap","Soda / cola","Other:"]'></table>
+    <h3>Analysis questions</h3>
+    <div class="field"><label for="w1pa1">1. Why did you need the control cup of plain indicator?</label><textarea id="w1pa1" data-note="w1p-a1"></textarea></div>
+    <div class="field"><label for="w1pa2">2. Which predictions were wrong? What surprised you?</label><textarea id="w1pa2" data-note="w1p-a2"></textarea></div>
+    <div class="field"><label for="w1pa3">3. In the bonus step, what happened when you mixed an acid and a base? Explain using H⁺ ions.</label><textarea id="w1pa3" data-note="w1p-a3"></textarea></div>
+    <div class="field"><label for="w1pa4">4. Name two sources of error in this experiment and how you would reduce them.</label><textarea id="w1pa4" data-note="w1p-a4"></textarea></div>
+    <p class="small muted">No cabbage? Use the Virtual Lab's pH Explorer and the substance list to "test" each item virtually, and write your predictions first.</p>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 1 Quiz</h2>
+    <div class="quiz" data-quiz="1"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>
