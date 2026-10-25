@@ -115,7 +115,7 @@
         <a href="${r}/glossary.html" ${page === "glossary" ? 'aria-current="page"' : ""}>Glossary</a>
         <a href="${r}/final-exam.html" ${page === "final" ? 'aria-current="page"' : ""}>Final Exam</a>
         <a href="${r}/progress.html" ${page === "progress" ? 'aria-current="page"' : ""}>My Progress</a>
-        <button type="button" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+        <button type="button" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌓</button>
       </nav></div>`;
     Bio.$("#week-jump").addEventListener("change", (e) => { if (e.target.value) location.href = e.target.value; });
     Bio.$("#theme-toggle").addEventListener("click", toggleTheme);
