@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 4 · Energy: Respiration & Photosynthesis | Bio 101</title>
+<meta name="description" content="Bio 101 Week 4: ATP, cellular respiration, fermentation and photosynthesis.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week04.js"></script>
+</head>
+<body data-root=".." data-week="4">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 4 of 10</div>
+    <h1>Energy: Respiration & Photosynthesis</h1>
+    <p>Every heartbeat, thought and step costs energy. This week follows energy from sunlight into sugar (photosynthesis) and from sugar into ATP (cellular respiration), the two processes that power nearly all life on Earth.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Explain how ATP stores and releases energy.</li>
+          <li>Write the overall equations for cellular respiration and photosynthesis and explain how they're linked.</li>
+          <li>Describe the stages of cellular respiration, where each occurs, and its products.</li>
+          <li>Compare aerobic respiration with lactic acid and alcoholic fermentation.</li>
+          <li>Describe the light reactions and the Calvin cycle.</li>
+          <li>Interpret data about limiting factors in photosynthesis.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~50 min)</li>
+          <li data-item="lab">Virtual labs: Respiration stepper + Pondweed photosynthesis (~50 min)</li>
+          <li data-item="practical">Practical: Yeast balloon fermentation (~75 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/7-introduction" target="_blank" rel="noopener">Ch. 7 Cellular Respiration</a> and
+          <a href="https://openstax.org/books/biology-2e/pages/8-introduction" target="_blank" rel="noopener">Ch. 8 Photosynthesis</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> 3–4 packets of dry yeast, sugar, 4 small plastic bottles, 4 balloons, warm water, string and a ruler.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. Energy and ATP</h2>
+      <p><strong>Metabolism</strong> is the sum of all chemical reactions in a living thing. <em>Catabolic</em> reactions break molecules down and release energy, as when you digest food. <em>Anabolic</em> reactions build molecules and consume energy, as when you build muscle protein. The two are coupled by a single molecule: <strong>ATP</strong>, adenosine triphosphate.</p>
+      <p>ATP is a nucleotide with a chain of three phosphate groups. The negatively charged phosphates repel each other, like a compressed spring. Snipping off the last phosphate (ATP → ADP + Pi) releases energy the cell uses to contract muscles, pump ions and build molecules. Food energy then recharges ADP back into ATP. Each cell recycles its ATP thousands of times a day. Your body turns over roughly its own body weight in ATP daily, while holding only about 250 g at any moment.</p>
+      <p>Energy in food is stored in the arrangement of electrons in chemical bonds. Cells harvest it through <strong>redox reactions</strong>, which move electrons from one molecule to another. <em>Oxidation</em> is the loss of electrons and <em>reduction</em> is the gain ("OIL RIG"). Electron carriers, <strong>NAD⁺</strong> (which becomes NADH) and <strong>FAD</strong> (which becomes FADH₂), act like rechargeable batteries that carry high-energy electrons from food to where they're cashed in for ATP.</p>
+
+      <h2>2. Cellular respiration: the big picture</h2>
+      <p style="text-align:center;font-size:1.1em"><strong>C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + ~32 ATP</strong></p>
+      <p>This equation looks like burning, and chemically it is: the same overall reaction as setting sugar on fire. But cells release the energy in many small, controlled steps instead of one blast, capturing much of it as ATP and losing the rest as body heat. That heat is what keeps you at 37 °C.</p>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Stage</th><th>Location</th><th>Input</th><th>Output (per glucose)</th><th>Needs O₂?</th></tr>
+        <tr><td>1. Glycolysis</td><td>Cytoplasm</td><td>Glucose</td><td>2 pyruvate, 2 ATP (net), 2 NADH</td><td>No</td></tr>
+        <tr><td>2. Pyruvate oxidation</td><td>Mitochondrial matrix</td><td>2 pyruvate</td><td>2 acetyl-CoA, 2 CO₂, 2 NADH</td><td>Indirectly</td></tr>
+        <tr><td>3. Krebs (citric acid) cycle</td><td>Mitochondrial matrix</td><td>2 acetyl-CoA</td><td>4 CO₂, 2 ATP, 6 NADH, 2 FADH₂</td><td>Indirectly</td></tr>
+        <tr><td>4. Electron transport chain + chemiosmosis</td><td>Inner mitochondrial membrane</td><td>10 NADH, 2 FADH₂, 6 O₂</td><td>~28 ATP, 6 H₂O</td><td>Yes</td></tr>
+      </table></div>
+      <h3>Glycolysis</h3>
+      <p>In the cytoplasm, a 6-carbon glucose is split into two 3-carbon <strong>pyruvate</strong> molecules. The cell invests 2 ATP and gets 4 back, for a net profit of 2 ATP plus 2 NADH. Glycolysis needs no oxygen and no organelles. It is found in almost every organism, a sign that it evolved very early in the history of life.</p>
+      <h3>Pyruvate oxidation and the Krebs cycle</h3>
+      <p>If oxygen is available, pyruvate enters the mitochondrion. Each pyruvate loses a carbon as CO₂ and becomes acetyl-CoA, which feeds the <strong>Krebs cycle</strong>. Each turn strips the remaining carbons off as CO₂ and loads electron carriers. <strong>This is where the CO₂ you exhale comes from:</strong> the carbon atoms of the food you ate.</p>
+      <h3>The electron transport chain: the big payoff</h3>
+      <p>NADH and FADH₂ deliver their electrons to a chain of proteins embedded in the inner mitochondrial membrane. As electrons pass down the chain, their energy pumps H⁺ ions across the membrane, building up a steep gradient, like water behind a dam. The H⁺ ions flow back through <strong>ATP synthase</strong>, a molecular turbine that physically spins and makes ATP. This is called <strong>chemiosmosis</strong>.</p>
+      <p>At the end of the chain, the spent electrons must go somewhere. <strong>Oxygen is the final electron acceptor</strong>: it grabs the electrons plus H⁺ to form water. That is the reason you breathe. Without O₂, the chain backs up and ATP production collapses within seconds. Cyanide kills by blocking the last protein in the chain.</p>
+
+      <details class="check"><summary>A person loses 10 kg of fat on a diet. Where, physically, did that mass go?</summary>
+        <p>Mostly out through the lungs! When fat is broken down, its carbon leaves as exhaled CO₂ (about 84% of the mass), and the rest leaves as water (urine, sweat, breath). A 2014 study calculated this in detail.</p>
+      </details>
+
+      <h2>3. Life without oxygen: fermentation</h2>
+      <p>Glycolysis needs a steady supply of NAD⁺ to keep going. When oxygen is scarce, the electron transport chain can't recycle NADH back into NAD⁺, so cells use <strong>fermentation</strong>: pyruvate takes the electrons from NADH, regenerating NAD⁺. Fermentation makes no extra ATP. Its only job is to keep glycolysis running for 2 ATP per glucose.</p>
+      <ul>
+        <li><strong>Lactic acid fermentation</strong> (your muscles during a sprint, and bacteria that make yogurt): pyruvate → lactate. The lactate is later carried to the liver and recycled.</li>
+        <li><strong>Alcoholic fermentation</strong> (yeast): pyruvate → ethanol + CO₂. That CO₂ makes bread rise and beer fizz, and you'll measure it in this week's practical.</li>
+      </ul>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: why sprinters and marathoners train differently</span>
+        <p>A 100 m sprint is powered largely by stored ATP, creatine phosphate and fast glycolysis/fermentation. A marathon relies almost entirely on aerobic respiration of glucose and fat. Endurance training increases the number of mitochondria in your muscles and the capillaries that supply them with O₂. Muscle soreness a day or two after hard exercise is caused by microscopic muscle damage, not by lactic acid as was long believed.</p>
+      </div>
+
+      <h2>4. Photosynthesis: capturing sunlight</h2>
+      <p style="text-align:center;font-size:1.1em"><strong>6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂</strong></p>
+      <p>Photosynthesis is cellular respiration run in reverse, powered by light. It takes place in <strong>chloroplasts</strong>, which contain stacks of membrane discs (<em>thylakoids</em>) surrounded by fluid (<em>stroma</em>). The green pigment <strong>chlorophyll</strong> absorbs red and blue light strongly and reflects green, which is why plants look green.</p>
+      <h3>Stage 1: the light reactions (thylakoid membranes)</h3>
+      <p>Light energy excites electrons in chlorophyll. To replace them, the plant <strong>splits water</strong>, releasing O₂ as a by-product. Every breath you take depends on this step. The energized electrons flow through an electron transport chain much like the one in mitochondria, producing <strong>ATP</strong> and <strong>NADPH</strong>.</p>
+      <h3>Stage 2: the Calvin cycle (stroma)</h3>
+      <p>Using ATP and NADPH from the light reactions, the enzyme <strong>RuBisCO</strong> fixes CO₂ from the air onto an existing sugar. A series of reactions then produces a 3-carbon sugar (G3P) that the plant builds into glucose, sucrose, starch and cellulose. RuBisCO may be the most abundant protein on Earth.</p>
+      <h3>Limiting factors</h3>
+      <p>The rate of photosynthesis is controlled by whichever factor is in shortest supply: <strong>light intensity</strong>, <strong>CO₂ concentration</strong> or <strong>temperature</strong> (which affects enzymes like RuBisCO). Increasing a factor that isn't limiting does nothing. You'll prove this with the pondweed simulation.</p>
+
+      <h2>5. The great cycle</h2>
+      <figure>
+        <svg viewBox="0 0 460 200" width="460" role="img" aria-label="Cycle: photosynthesis in chloroplasts makes glucose and oxygen used by respiration in mitochondria, which returns CO2 and water">
+          <g font-family="system-ui" font-size="13" fill="currentColor">
+            <rect x="20" y="60" width="150" height="80" rx="14" fill="#3e9b4f" opacity=".2" stroke="#3e9b4f"/>
+            <text x="95" y="95" text-anchor="middle" font-weight="700">Photosynthesis</text><text x="95" y="115" text-anchor="middle">(chloroplast)</text>
+            <rect x="290" y="60" width="150" height="80" rx="14" fill="#f08c3a" opacity=".2" stroke="#f08c3a"/>
+            <text x="365" y="95" text-anchor="middle" font-weight="700">Cellular respiration</text><text x="365" y="115" text-anchor="middle">(mitochondria)</text>
+            <path d="M175 75 C 220 30, 250 30, 285 75" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#a4)"/>
+            <text x="230" y="35" text-anchor="middle">glucose + O₂</text>
+            <path d="M285 128 C 250 172, 220 172, 175 128" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#a4)"/>
+            <text x="230" y="185" text-anchor="middle">CO₂ + H₂O</text>
+            <text x="95" y="40" text-anchor="middle">☀️ light in</text><text x="365" y="160" text-anchor="middle">ATP + heat out</text>
+            <defs><marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="currentColor"/></marker></defs>
+          </g>
+        </svg>
+        <figcaption>Figure 4.1: The products of each process are the reactants of the other. Energy flows in as light and out as heat, while matter cycles.</figcaption>
+      </figure>
+      <p>Note that <strong>plants do both</strong>: they photosynthesize in chloroplasts <em>and</em> respire in mitochondria, day and night. During the day, photosynthesis outpaces respiration, so plants release net O₂.</p>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>ATP is the cell's energy currency, and NADH and FADH₂ carry electrons.</li>
+          <li>Respiration: glycolysis (cytoplasm) → pyruvate oxidation and Krebs (matrix) → electron transport chain (inner membrane). About 32 ATP per glucose, and O₂ is the final electron acceptor.</li>
+          <li>Fermentation regenerates NAD⁺ without O₂ and yields only 2 ATP.</li>
+          <li>Photosynthesis: the light reactions split water and make ATP and NADPH, then the Calvin cycle fixes CO₂ into sugar.</li>
+          <li>The rate is set by the limiting factor.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="respiration"></div>
+    <div data-lab="photosynthesis"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Yeast Balloon Fermentation</h2>
+    <p>Yeast are single-celled fungi. Given sugar in a sealed bottle, they quickly use up the oxygen and switch to <strong>alcoholic fermentation</strong>, releasing CO₂ that inflates a balloon. You'll test how the amount of sugar (the substrate) affects the rate.</p>
+    <div class="callout safety"><span class="callout-title">⚠️ Safety</span>Use warm (not hot) tap water. Don't drink the mixtures. Balloons are a choking hazard for small children; latex can cause allergies.</div>
+    <div class="two-col">
+      <div>
+        <h3>Materials</h3>
+        <ul>
+          <li>4 identical small plastic bottles (~500 mL)</li>
+          <li>4 balloons (stretch them a few times first)</li>
+          <li>4 packets (or 4 × 2¼ tsp) of active dry yeast</li>
+          <li>Sugar, warm water (~40 °C, comfortable to touch)</li>
+          <li>String and ruler (or a flexible tape measure), timer, funnel</li>
+        </ul>
+        <h3>Hypothesis</h3>
+        <textarea data-note="w4p-hyp" aria-label="Hypothesis"></textarea>
+      </div>
+      <div>
+        <h3>Procedure</h3>
+        <ol>
+          <li>Label bottles A–D. Add 1 cup (240 mL) warm water to each.</li>
+          <li>Add sugar: A = 0 tsp (control), B = 1 tsp, C = 2 tsp, D = 4 tsp. Swirl to dissolve.</li>
+          <li>Add 1 packet of yeast to each, swirl, and immediately stretch a balloon over each mouth.</li>
+          <li>Every 10 minutes for 60 minutes, measure each balloon's circumference at its widest point with string, then measure the string.</li>
+          <li>Record your measurements. The chart plots them automatically.</li>
+          <li><em>Extension:</em> test temperature instead (cold vs. warm vs. hot water) with the same amount of sugar.</li>
+        </ol>
+      </div>
+    </div>
+    <h3>Data table: balloon circumference (cm)</h3>
+    <table class="datatable" data-id="w4p" data-cols='["Time (min)","A: 0 tsp","B: 1 tsp","C: 2 tsp","D: 4 tsp"]' data-rows='["0","10","20","30","40","50","60"]' data-chart='{"x":0,"y":[1,2,3,4],"xLabel":"Time (minutes)","yLabel":"Circumference (cm)"}'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w4pa1">1. Which balloon inflated fastest? Was the effect of sugar proportional (twice the sugar, twice the gas)?</label><textarea id="w4pa1" data-note="w4p-a1"></textarea></div>
+    <div class="field"><label for="w4pa2">2. Write the word equation for alcoholic fermentation. Which product inflated the balloon?</label><textarea id="w4pa2" data-note="w4p-a2"></textarea></div>
+    <div class="field"><label for="w4pa3">3. What was the purpose of bottle A? Did it inflate at all? Why might it inflate slightly?</label><textarea id="w4pa3" data-note="w4p-a3"></textarea></div>
+    <div class="field"><label for="w4pa4">4. Connect this to Week 2: how is sugar concentration like substrate concentration in the enzyme simulator?</label><textarea id="w4pa4" data-note="w4p-a4"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 4 Quiz</h2>
+    <div class="quiz" data-quiz="4"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>

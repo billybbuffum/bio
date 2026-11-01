@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 6 · Gene Expression & Mutation | Bio 101</title>
+<meta name="description" content="Bio 101 Week 6: transcription, translation, the genetic code, gene regulation and mutations.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week06.js"></script>
+</head>
+<body data-root=".." data-week="6">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 6 of 10</div>
+    <h1>Gene Expression & Mutation</h1>
+    <p>DNA is a recipe book, but a recipe doesn't feed anyone until it is cooked. This week we follow information from a gene to a working protein, learn how cells choose which recipes to use, and see how a single typo can change a life.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>State the central dogma and compare DNA and RNA.</li>
+          <li>Describe transcription and mRNA processing (capping, tail, splicing).</li>
+          <li>Use a codon table to translate mRNA into a protein.</li>
+          <li>Explain the roles of mRNA, tRNA and ribosomes in translation.</li>
+          <li>Explain how gene regulation lets cells with identical DNA become different.</li>
+          <li>Classify mutations (silent, missense, nonsense, frameshift) and predict their effects.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~55 min)</li>
+          <li data-item="lab">Virtual labs: Central Dogma Machine + Mutation Lab (~50 min)</li>
+          <li data-item="practical">Practical: Decode the sickle-cell gene by hand (~45 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/15-introduction" target="_blank" rel="noopener">Ch. 15 Genes and Proteins</a> and
+          <a href="https://openstax.org/books/biology-2e/pages/16-introduction" target="_blank" rel="noopener">Ch. 16 Gene Expression</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> paper and pencil, colored pencils or markers, and optionally a pipe cleaner (or string) and 2 colors of beads or small candies.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. The central dogma</h2>
+      <p>Francis Crick summarized the flow of genetic information as the <strong>central dogma</strong> of molecular biology:</p>
+      <p style="text-align:center;font-size:1.25em"><strong>DNA</strong> —<em>transcription</em>→ <strong>RNA</strong> —<em>translation</em>→ <strong>Protein</strong></p>
+      <p>DNA stays safely in the nucleus like a master reference book that never leaves the library. When a protein is needed, the cell makes a disposable working copy of one gene in RNA and sends it out to the protein-building machinery. There are known exceptions: retroviruses such as HIV copy RNA back into DNA using the enzyme <em>reverse transcriptase</em>.</p>
+      <div class="table-scroll"><table class="simple">
+        <tr><th></th><th>DNA</th><th>RNA</th></tr>
+        <tr><td>Sugar</td><td>Deoxyribose</td><td>Ribose</td></tr>
+        <tr><td>Bases</td><td>A, T, G, C</td><td>A, <strong>U</strong>, G, C (uracil replaces thymine)</td></tr>
+        <tr><td>Strands</td><td>Double</td><td>Usually single</td></tr>
+        <tr><td>Lifespan</td><td>Permanent archive</td><td>Temporary (minutes to days)</td></tr>
+        <tr><td>Types</td><td>One</td><td>mRNA (message), tRNA (adapter), rRNA (ribosome), plus many regulatory RNAs</td></tr>
+      </table></div>
+
+      <h2>2. Transcription: DNA → RNA</h2>
+      <p>Transcription happens in the nucleus. <strong>RNA polymerase</strong> binds to a DNA sequence called the <strong>promoter</strong> just upstream of a gene, unwinds a short section, and reads one strand, the <strong>template strand</strong>, building a complementary RNA 5'→3'. The other DNA strand is the <strong>coding strand</strong>, so called because the RNA matches its sequence (with U for T). Transcription stops at a terminator sequence.</p>
+      <p><em>Example:</em> template DNA 3'-TAC GGA TTC-5' → mRNA 5'-AUG CCU AAG-3'.</p>
+      <h3>mRNA processing (eukaryotes)</h3>
+      <p>Before leaving the nucleus, the new <em>pre-mRNA</em> is edited:</p>
+      <ul>
+        <li>A protective <strong>5' cap</strong> and a <strong>poly-A tail</strong> are added. They help export and protect the mRNA and mark it for translation.</li>
+        <li><strong>Splicing:</strong> non-coding sections called <strong>introns</strong> are cut out, and the coding <strong>exons</strong> are joined together. Through <strong>alternative splicing</strong>, the same gene can be spliced in different ways to make different proteins. This is part of how ~20,000 genes produce perhaps 100,000+ different proteins.</li>
+      </ul>
+
+      <h2>3. The genetic code</h2>
+      <p>The mRNA is read in groups of three bases called <strong>codons</strong>. With 4 bases, there are 4 × 4 × 4 = <strong>64 codons</strong>, coding for 20 amino acids plus stop signals. Key features:</p>
+      <ul>
+        <li><strong>AUG</strong> is the start codon and codes for methionine (Met).</li>
+        <li><strong>UAA, UAG, UGA</strong> are stop codons.</li>
+        <li>The code is <strong>redundant</strong>: most amino acids have several codons (GGU, GGC, GGA and GGG all mean glycine). Often only the third base differs, which buffers against some mutations.</li>
+        <li>The code is <strong>unambiguous</strong>: each codon means only one thing.</li>
+        <li>The code is <strong>nearly universal</strong>: bacteria, plants and people read it the same way. This is powerful evidence of common ancestry, and it's why bacteria can make human insulin from a human gene.</li>
+      </ul>
+      <p>You'll find the full codon table in the Virtual Lab.</p>
+
+      <h2>4. Translation: RNA → protein</h2>
+      <p>Translation happens at <strong>ribosomes</strong> in the cytoplasm or on the rough ER. Three kinds of RNA cooperate:</p>
+      <ul>
+        <li><strong>mRNA</strong> carries the codons.</li>
+        <li><strong>tRNA</strong> molecules are adapters. Each carries one specific amino acid at one end and has a three-base <strong>anticodon</strong> at the other that pairs with a matching codon.</li>
+        <li><strong>rRNA</strong> forms the core of the ribosome and actually catalyzes the peptide bonds. The ribosome is a ribozyme, an RNA enzyme.</li>
+      </ul>
+      <ol>
+        <li><strong>Initiation:</strong> the small ribosomal subunit binds the mRNA and finds AUG. A tRNA carrying Met pairs with it, and the large subunit joins.</li>
+        <li><strong>Elongation:</strong> the next tRNA pairs with the next codon, the ribosome links its amino acid to the growing chain, and then the ribosome shifts one codon along. This repeats at around 5–20 amino acids per second.</li>
+        <li><strong>Termination:</strong> at a stop codon, a release factor frees the finished chain, which folds (often with help) into its working shape.</li>
+      </ol>
+      <details class="check"><summary>Translate the mRNA 5'-AUG UGG AAA UAG-3'.</summary>
+        <p>Met – Trp – Lys – stop. The protein is three amino acids long.</p>
+      </details>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: mRNA vaccines</span>
+        <p>The COVID-19 mRNA vaccines use translation directly. They deliver an mRNA encoding the virus's spike protein, wrapped in a lipid bubble. Your ribosomes translate it, your immune system learns to recognize the spike (Week 10), and the mRNA is broken down within days. It never enters the nucleus and cannot change your DNA. Katalin Karikó and Drew Weissman won the 2023 Nobel Prize for the modifications that made this possible.</p>
+      </div>
+
+      <h2>5. Gene regulation: same DNA, different cells</h2>
+      <p>A neuron and a skin cell in your body contain identical DNA. They differ because they <strong>express</strong> different genes. Cells control gene expression at every step, but the most important control is whether a gene is transcribed at all.</p>
+      <ul>
+        <li><strong>Transcription factors</strong> are proteins that bind DNA near a gene and switch it on or off. Combinations of them act like a cell's identity code. Adding just four transcription factors can reprogram an adult skin cell into a stem cell (Yamanaka's Nobel-winning discovery of iPS cells, 2012).</li>
+        <li><strong>Chromatin packing:</strong> tightly wound DNA can't be read. Chemical tags on histones loosen or tighten it.</li>
+        <li><strong>Epigenetics:</strong> marks such as DNA methylation change gene activity without changing the sequence, and they can be passed on when cells divide. Diet, stress and toxins can affect these marks.</li>
+        <li>In bacteria, related genes are often grouped into <strong>operons</strong> controlled by a single switch. The <em>lac</em> operon turns on lactose-digesting genes only when lactose is present.</li>
+      </ul>
+
+      <h2>6. Mutations: when the code changes</h2>
+      <p>A <strong>mutation</strong> is any change in the DNA sequence. Mutations arise from rare copying errors and from <em>mutagens</em> such as UV light, tobacco smoke chemicals and radiation. Most are harmless, some are harmful, and a few are beneficial: they are the raw material of evolution.</p>
+      <h3>Point mutations (one base substituted)</h3>
+      <ul>
+        <li><strong>Silent:</strong> the new codon codes for the same amino acid (GGU → GGC, both Gly).</li>
+        <li><strong>Missense:</strong> one amino acid is replaced by another. The effect depends on where it is and how different the new amino acid is.</li>
+        <li><strong>Nonsense:</strong> a codon becomes a stop codon, producing a truncated, usually non-functional protein.</li>
+      </ul>
+      <h3>Insertions and deletions</h3>
+      <p>Adding or removing bases in a number that isn't a multiple of 3 causes a <strong>frameshift</strong>. Every codon downstream is misread, like removing one letter from the sentence THE BIG CAT ATE THE RAT, which becomes THB IGC ATA TET HER AT. Frameshifts usually destroy the protein.</p>
+      <div class="callout human"><span class="callout-title">🩸 Human connection: sickle-cell disease and malaria</span>
+        <p>Sickle-cell disease is caused by one base change in the β-globin gene: GAG → GTG, which turns glutamic acid (charged) into valine (hydrophobic). People with two copies have painful crises and anemia, because hemoglobin forms rigid rods that deform red cells. But people with <em>one</em> copy are significantly protected against severe malaria. That's why the allele is common where malaria is, or was, widespread, a vivid example of natural selection (Week 8). In 2023, a CRISPR-based therapy for sickle-cell disease became the first approved gene-editing treatment.</p>
+      </div>
+      <p><strong>Somatic vs. germline:</strong> mutations in body cells (somatic) affect only that person and can contribute to cancer when they hit genes controlling cell division. Mutations in eggs or sperm (germline) can be inherited.</p>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>DNA → RNA (transcription, in the nucleus) → protein (translation, at ribosomes).</li>
+          <li>Pre-mRNA is capped, tailed and spliced, and introns are removed.</li>
+          <li>Codons are triplets. AUG starts translation and UAA, UAG and UGA stop it. The code is redundant and nearly universal.</li>
+          <li>tRNA anticodons match mRNA codons, and the ribosome links the amino acids.</li>
+          <li>Gene regulation explains how cells differ. Mutations can be silent, missense, nonsense or frameshift.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="dogma"></div>
+    <div data-lab="mutation"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Decode the Sickle-Cell Gene by Hand</h2>
+    <p>Real molecular biologists still check sequences by eye. You'll be the RNA polymerase and the ribosome, using only pencil, paper and the codon table, then build a physical model of how one amino acid change alters a protein.</p>
+    <h3>Part A: Transcribe and translate</h3>
+    <p>Below are the <strong>template strands</strong> for the first 7 codons of the normal and sickle-cell β-globin genes. For each: (1) write the mRNA (5'→3'), (2) split it into codons, (3) translate using the codon table (in the Virtual Lab, or printed). Don't use the simulator until you've finished, then use it to check.</p>
+    <div class="lab-output">
+      <div>Normal template: <span class="seq">3'-TAC CAC GTG GAC TGA GGA CTC-5'</span></div>
+      <div>Sickle template: <span class="seq">3'-TAC CAC GTG GAC TGA GGA CAC-5'</span></div>
+    </div>
+    <table class="datatable" data-id="w6pa" data-cols='["Codon #","Normal mRNA codon","Normal amino acid","Sickle mRNA codon","Sickle amino acid"]' data-rows='["1","2","3","4","5","6","7"]'></table>
+    <h3>Part B: The secret word</h3>
+    <p>This template strand hides a word in one-letter amino acid codes (the letters after the starting Met): <span class="seq">3'-TAC AGC TAG ACG TTC AAC CTC ATT-5'</span></p>
+    <div class="field"><label for="w6pb">mRNA, amino acids and the hidden word:</label><textarea id="w6pb" data-note="w6p-b"></textarea></div>
+    <h3>Part C: Build a protein model</h3>
+    <ol>
+      <li>Take a pipe cleaner or string (the polypeptide backbone) and thread on about 12 beads in two colors: one color for <strong>hydrophobic</strong> amino acids and another for <strong>charged/polar</strong> ones. Use a pattern where position 7 is charged (Glu).</li>
+      <li>Fold your "protein" so all the hydrophobic beads are tucked inside and charged ones face outward toward the "water." This is how real proteins fold.</li>
+      <li>Now swap bead 7 for a hydrophobic bead (Glu → Val). It now sits on the surface but "wants" to hide from water.</li>
+      <li>Make a second model the same way and see how the two sticky surfaces could cling together. That's how sickle hemoglobin molecules chain into long rods.</li>
+    </ol>
+    <p class="small muted">Photograph or sketch your models for your notebook.</p>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w6pa1">1. What single base change separates the two templates? What type of mutation is it?</label><textarea id="w6pa1" data-note="w6p-a1"></textarea></div>
+    <div class="field"><label for="w6pa2">2. Explain, step by step, how this one-letter DNA change leads to sickle-shaped red blood cells and pain/anemia. Use: codon, amino acid, hydrophobic, protein shape.</label><textarea id="w6pa2" data-note="w6p-a2"></textarea></div>
+    <div class="field"><label for="w6pa3">3. Change the last base of the normal codon 7 (GAG → GAA). What happens? What type of mutation is that?</label><textarea id="w6pa3" data-note="w6p-a3"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 6 Quiz</h2>
+    <div class="quiz" data-quiz="6"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>

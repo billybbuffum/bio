@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 10 · The Human Body II: Transport & Defense | Bio 101</title>
+<meta name="description" content="Bio 101 Week 10: heart and blood, lungs, digestion, kidneys, the immune system, and the capstone project.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week10.js"></script>
+</head>
+<body data-root=".." data-week="10">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 10 of 10</div>
+    <h1>The Human Body II: Transport & Defense</h1>
+    <p>Every cell in your body needs oxygen and nutrients delivered, wastes removed, and protection from invaders. This final week tours the systems that do it: heart and blood, lungs, gut, kidneys and the remarkable immune system. Then you'll pull the whole course together in a capstone project.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Trace the path of blood through the heart, lungs and body, and describe the components of blood.</li>
+          <li>Explain gas exchange in the lungs and how breathing is controlled.</li>
+          <li>Describe mechanical and chemical digestion and nutrient absorption.</li>
+          <li>Explain how the kidneys filter blood and maintain homeostasis.</li>
+          <li>Compare innate and adaptive immunity, and explain how vaccines and herd immunity work.</li>
+          <li>Apply ABO/Rh blood-group knowledge to transfusions.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~70 min)</li>
+          <li data-item="lab">Virtual labs: Blood flow, Blood typing, Outbreak simulator (~60 min)</li>
+          <li data-item="practical">Practical: Heart rate, exercise & lung capacity (~40 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+          <li data-item="capstone">Capstone project: From Gene to Body (~3 hours)</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/40-introduction" target="_blank" rel="noopener">Ch. 40 Circulatory System</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/39-introduction" target="_blank" rel="noopener">Ch. 39 Respiratory System</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/34-introduction" target="_blank" rel="noopener">Ch. 34 Digestive System</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/41-introduction" target="_blank" rel="noopener">Ch. 41 Osmotic Regulation & Excretion</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/42-introduction" target="_blank" rel="noopener">Ch. 42 Immune System</a>.</div>
+        <div class="card small"><strong>After this week:</strong> take the <a href="../final-exam.html">Final Exam</a> and check <a href="../progress.html">My Progress</a> for your certificate.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. The cardiovascular system</h2>
+      <p>Your heart beats about 100,000 times a day, pumping roughly 7,000 liters of blood through some 100,000 km of blood vessels. That's enough to circle Earth twice.</p>
+      <h3>The heart: a double pump</h3>
+      <p>The human heart has four chambers: two <strong>atria</strong> (receiving chambers) on top and two <strong>ventricles</strong> (pumping chambers) below, separated into right and left sides by a wall called the septum. It drives two circuits:</p>
+      <ul>
+        <li><strong>Pulmonary circuit:</strong> right side → lungs → back to the left side. Blood picks up O₂ and drops off CO₂.</li>
+        <li><strong>Systemic circuit:</strong> left side → whole body → back to the right side. The left ventricle has the thickest wall because it pumps against the highest pressure.</li>
+      </ul>
+      <p>Path: body → vena cava → <strong>right atrium</strong> → tricuspid valve → <strong>right ventricle</strong> → pulmonary artery → lungs → pulmonary veins → <strong>left atrium</strong> → mitral valve → <strong>left ventricle</strong> → aorta → body. Valves keep flow one-way, and the "lub-dub" of your heartbeat is the sound of valves snapping shut. The heartbeat starts in the heart itself, in the <strong>sinoatrial (SA) node</strong>, the natural pacemaker. Nerves and hormones only speed it up or slow it down.</p>
+      <h3>Blood vessels</h3>
+      <ul>
+        <li><strong>Arteries</strong> carry blood <em>away</em> from the heart. They have thick, elastic, muscular walls to handle high pressure, and that pressure surge is your pulse.</li>
+        <li><strong>Capillaries</strong> have walls only one cell thick, where exchange with tissues happens. No cell is more than a few cells away from one.</li>
+        <li><strong>Veins</strong> return blood <em>to</em> the heart at low pressure, helped by one-way valves and squeezing skeletal muscles.</li>
+      </ul>
+      <p><strong>Blood pressure</strong> is written as systolic over diastolic (ventricles contracting / relaxing), with about 120/80 mmHg typical for a healthy adult. Chronic high blood pressure strains the heart and damages vessels.</p>
+      <h3>Blood</h3>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Component</th><th>Share</th><th>Job</th></tr>
+        <tr><td>Plasma</td><td>~55%</td><td>Water carrying proteins, nutrients, hormones, CO₂ (mostly as bicarbonate) and wastes</td></tr>
+        <tr><td>Red blood cells</td><td>~45%</td><td>Carry O₂ on hemoglobin. No nucleus, live ~120 days, ~25 trillion in your body</td></tr>
+        <tr><td>White blood cells</td><td>&lt;1%</td><td>Immune defense (see below)</td></tr>
+        <tr><td>Platelets</td><td>&lt;1%</td><td>Cell fragments that start clotting</td></tr>
+      </table></div>
+      <p><strong>Blood types</strong> are set by antigens on red cells. Type A has A antigens and anti-B antibodies in plasma; type B the reverse; AB has both antigens and neither antibody; O has neither antigen and both antibodies. The Rh(D) antigen adds + or −. A mismatched transfusion makes the recipient's antibodies clump (agglutinate) and destroy donor cells, which can be fatal. You'll practice this in Lab 10B.</p>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: heart disease</span>
+        <p>Cardiovascular disease is the leading cause of death worldwide. In <em>atherosclerosis</em>, fatty plaques build up in artery walls. If a plaque ruptures in a coronary artery, a clot can block blood to part of the heart muscle (a heart attack). In a brain artery, it causes a stroke. Risk factors include high LDL cholesterol, high blood pressure, smoking, diabetes, inactivity and genetics. Regular exercise strengthens the heart, lowering resting heart rate, which you'll measure in this week's practical.</p>
+      </div>
+
+      <h2>2. The respiratory system</h2>
+      <p>Air flows through the nose → pharynx → larynx → trachea → two bronchi → ever-smaller bronchioles → about <strong>480 million alveoli</strong>, tiny air sacs wrapped in capillaries. Together they provide a gas-exchange surface of roughly 70 m², about the size of a badminton court. O₂ diffuses from the alveoli into the blood and CO₂ diffuses out, because each moves down its concentration gradient across walls just ~0.5 µm thick.</p>
+      <p><strong>Breathing</strong> is driven by the <strong>diaphragm</strong>. When it contracts and flattens, along with the rib muscles, the chest expands, pressure drops and air rushes in. Exhaling at rest is passive. Surprisingly, your urge to breathe is triggered mainly by rising <strong>CO₂</strong> (which makes blood more acidic) sensed in the brainstem, not by low O₂. That links back to the bicarbonate buffer from Week 1.</p>
+      <p>About 98% of O₂ in blood rides on hemoglobin. Carbon monoxide binds hemoglobin ~200 times more tightly than O₂, which is why CO detectors save lives. Cigarette smoke paralyzes the cilia that sweep mucus from the airways and, over time, destroys alveoli (emphysema).</p>
+
+      <h2>3. The digestive system</h2>
+      <p>Digestion breaks food into molecules small enough to absorb, using <strong>mechanical</strong> (chewing, churning) and <strong>chemical</strong> (enzymes, using hydrolysis from Week 2) processes.</p>
+      <ul>
+        <li><strong>Mouth:</strong> teeth grind, and salivary amylase begins starch digestion.</li>
+        <li><strong>Esophagus:</strong> waves of smooth-muscle contraction (<em>peristalsis</em>) push food down, even upside down.</li>
+        <li><strong>Stomach:</strong> acid (pH ~2) kills microbes and denatures proteins, and pepsin starts protein digestion. A mucus layer protects the stomach wall.</li>
+        <li><strong>Small intestine</strong> (~6 m): the main site of digestion and absorption. The pancreas adds enzymes (amylase, trypsin, lipase) and bicarbonate to neutralize the acid. The liver makes <strong>bile</strong>, stored in the gallbladder, which emulsifies fats. Folds, <strong>villi</strong> and microvilli create a huge absorptive surface. Sugars and amino acids enter the blood and go first to the liver; fats enter the lymph.</li>
+        <li><strong>Large intestine:</strong> absorbs water and hosts trillions of bacteria (the <strong>microbiome</strong>) that ferment fiber, make some vitamins and influence immunity.</li>
+      </ul>
+      <p>The <strong>liver</strong> is a chemical processing plant. It stores glycogen, detoxifies drugs and alcohol (using smooth ER from Week 3), makes blood proteins and bile, and converts ammonia into urea.</p>
+
+      <h2>4. The urinary system</h2>
+      <p>Your two <strong>kidneys</strong> filter your entire blood plasma about 60 times a day, around 180 liters, yet produce only ~1.5 liters of urine. Each contains about a million <strong>nephrons</strong>:</p>
+      <ol>
+        <li><strong>Filtration:</strong> blood pressure forces water and small molecules out of a capillary knot (the glomerulus) into the nephron. Cells and large proteins stay behind.</li>
+        <li><strong>Reabsorption:</strong> about 99% of the water, plus all the glucose and amino acids and most salts, are pulled back into the blood.</li>
+        <li><strong>Secretion:</strong> extra wastes, drugs and H⁺ are actively pumped into the urine.</li>
+      </ol>
+      <p>The kidneys are homeostasis champions. They control water balance (antidiuretic hormone, ADH, makes you conserve water when dehydrated), blood pressure, pH and salt levels. Glucose in urine is a classic sign of diabetes: blood glucose is so high that the nephrons can't reabsorb it all.</p>
+
+      <h2>5. The immune system</h2>
+      <p>You're under constant attack by bacteria, viruses, fungi and parasites. Your immune system defends in layers.</p>
+      <h3>Innate immunity: fast and general</h3>
+      <ul>
+        <li><strong>Barriers:</strong> skin, mucus, cilia, stomach acid, tears and saliva (containing the enzyme lysozyme), and friendly microbes that crowd out pathogens.</li>
+        <li><strong>Inflammation:</strong> damaged tissue releases histamine. Blood vessels widen and leak, causing redness, heat, swelling and pain, and bringing in defenders.</li>
+        <li><strong>Phagocytes:</strong> neutrophils and macrophages engulf and digest invaders (phagocytosis + lysosomes, Week 3).</li>
+        <li><strong>Natural killer cells</strong> destroy virus-infected and cancerous cells. <strong>Fever</strong> slows microbial growth and speeds immune responses.</li>
+      </ul>
+      <h3>Adaptive immunity: specific, with memory</h3>
+      <p>Adaptive immunity recognizes specific molecules called <strong>antigens</strong>. It relies on lymphocytes made in the bone marrow, each born with a unique receptor shaped by genetic shuffling of receptor genes. Together they can recognize billions of different shapes.</p>
+      <ul>
+        <li><strong>Helper T cells (CD4⁺)</strong> are the coordinators. When shown an antigen by a macrophage or dendritic cell, they activate B cells and cytotoxic T cells. HIV destroys helper T cells, which is why untreated HIV leads to AIDS.</li>
+        <li><strong>B cells</strong> become <strong>plasma cells</strong> that pour out <strong>antibodies</strong>, Y-shaped proteins that bind specific antigens. Antibodies neutralize toxins and viruses and tag microbes for destruction.</li>
+        <li><strong>Cytotoxic T cells (CD8⁺)</strong> kill your own cells that are infected or cancerous.</li>
+        <li><strong>Memory B and T cells</strong> persist for years or decades, launching a faster, stronger <em>secondary response</em> on re-exposure. That's why you usually get chickenpox only once.</li>
+      </ul>
+      <figure>
+        <svg viewBox="0 0 420 200" width="420" role="img" aria-label="Graph of antibody levels: a small slow primary response and a large fast secondary response">
+          <g font-family="system-ui" font-size="11" fill="currentColor">
+            <line x1="45" y1="15" x2="45" y2="170" stroke="currentColor"/><line x1="45" y1="170" x2="410" y2="170" stroke="currentColor"/>
+            <text x="16" y="95" transform="rotate(-90 16 95)" text-anchor="middle">Antibody level</text>
+            <path d="M45 168 C 80 168, 95 130, 115 128 C 135 126, 150 160, 205 165 L215 165 C 235 165, 245 30, 275 28 C 305 26, 330 80, 405 100" fill="none" stroke="#0f7b62" stroke-width="3"/>
+            <line x1="55" y1="170" x2="55" y2="180" stroke="currentColor"/><text x="55" y="192" text-anchor="middle">1st exposure</text>
+            <line x1="215" y1="170" x2="215" y2="180" stroke="currentColor"/><text x="215" y="192" text-anchor="middle">2nd exposure</text>
+            <text x="112" y="120" text-anchor="middle">primary (slow, small)</text><text x="300" y="20">secondary (fast, big)</text>
+          </g>
+        </svg>
+        <figcaption>Figure 10.1: Immunological memory. Vaccines provide the "first exposure" safely.</figcaption>
+      </figure>
+      <h3>Vaccines and herd immunity</h3>
+      <p>A <strong>vaccine</strong> presents a harmless antigen (an inactivated or weakened microbe, a protein piece, or mRNA instructions to make one) so your body forms memory cells without suffering the disease. Vaccines eradicated smallpox, which killed an estimated 300 million people in the 20th century alone, and have nearly eliminated polio. When enough people are immune, an infected person meets too few susceptible people to keep the chain going. This is <strong>herd immunity</strong>, and it protects newborns and people who can't be vaccinated. The more contagious the disease (the higher its R₀), the higher the coverage needed: ~95% for measles.</p>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: when immunity misfires</span>
+        <p><strong>Allergies</strong> are overreactions to harmless antigens like pollen or peanuts, driven by IgE antibodies and histamine. Antihistamines block the histamine. <strong>Autoimmune diseases</strong> happen when the immune system attacks the body's own cells: type 1 diabetes (beta cells), multiple sclerosis (myelin), rheumatoid arthritis (joints). New cancer <strong>immunotherapies</strong> release the brakes on T cells or engineer them (CAR-T cells) to attack tumors.</p>
+      </div>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>The heart is a four-chambered double pump. Arteries carry blood away from the heart, veins return it, and capillaries exchange.</li>
+          <li>Red cells carry O₂ on hemoglobin. ABO/Rh antigens determine transfusion compatibility.</li>
+          <li>Alveoli exchange gases by diffusion, and CO₂ level drives breathing.</li>
+          <li>Digestion uses enzymes (hydrolysis). The small intestine absorbs, and the large intestine reclaims water and houses the microbiome.</li>
+          <li>Nephrons filter, reabsorb and secrete to maintain water, salt and pH balance.</li>
+          <li>Innate immunity is fast and general. Adaptive immunity (B cells, antibodies, T cells) is specific and has memory, which vaccines exploit.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="bloodflow"></div>
+    <div data-lab="bloodtype"></div>
+    <div data-lab="epidemic"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Heart Rate, Exercise & Lung Capacity</h2>
+    <div class="callout safety"><span class="callout-title">⚠️ Safety</span>Only exercise at a level that's comfortable for you. Skip the exercise part if you have a heart or breathing condition or feel unwell; you can use a friend's data instead. Stop if you feel dizzy or have chest pain.</div>
+    <h3>Part A: Heart rate and recovery</h3>
+    <ol>
+      <li>Find your pulse on your wrist (radial artery, thumb side) or neck (carotid artery) with two fingers, not your thumb.</li>
+      <li>Sit quietly for 3 minutes. Count beats for 15 seconds and multiply by 4. This is your <strong>resting heart rate</strong> (minute 0).</li>
+      <li>Do 1 minute of jumping jacks or stair climbing.</li>
+      <li>Immediately measure your heart rate (minute 1), then again every minute for 5 more minutes while sitting.</li>
+      <li>Optional: repeat on another day, or compare with a family member.</li>
+    </ol>
+    <table class="datatable" data-id="w10pa" data-cols='["Minute (0 = before exercise)","Trial 1 (bpm)","Trial 2 / person 2 (bpm)","Breaths per minute (optional)"]' data-rows='["0","1","2","3","4","5","6"]' data-chart='{"x":0,"y":[1,2],"xLabel":"Minutes (exercise ended at 1)","yLabel":"Heart rate (bpm)"}'></table>
+    <h3>Part B: Estimate your lung capacity</h3>
+    <ol>
+      <li>Take the deepest breath you can, then blow out as much air as possible into a round balloon in one breath. Pinch it closed.</li>
+      <li>Measure the balloon's widest circumference C (cm) with string. Diameter d = C ÷ π. Volume ≈ (π/6) × d³ cm³. Divide by 1000 for liters.</li>
+      <li>Repeat 3 times and average. This approximates your <strong>vital capacity</strong> (typical adults: 3–5 L).</li>
+    </ol>
+    <div class="card small"><strong>Calculator:</strong> circumference <input type="number" id="w10-c" placeholder="cm" style="width:90px" aria-label="Balloon circumference in cm"> cm → <strong id="w10-v">—</strong> liters</div>
+    <table class="datatable" data-id="w10pb" data-cols='["Trial","Circumference (cm)","Volume (L)"]' data-rows='["1","2","3","Average"]'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w10pa1">1. Describe your heart-rate curve. How many minutes did recovery to near resting take?</label><textarea id="w10pa1" data-note="w10p-a1"></textarea></div>
+    <div class="field"><label for="w10pa2">2. Explain why heart rate and breathing rate rise during exercise. Connect muscle cells, cellular respiration (Week 4), CO₂, and the brainstem.</label><textarea id="w10pa2" data-note="w10p-a2"></textarea></div>
+    <div class="field"><label for="w10pa3">3. Trained athletes often have resting heart rates of 40–60 bpm and recover faster. Propose why, in terms of heart muscle and stroke volume.</label><textarea id="w10pa3" data-note="w10p-a3"></textarea></div>
+    <div class="field"><label for="w10pa4">4. Is this a negative or positive feedback response? Identify the stimulus, sensor, control center and effectors.</label><textarea id="w10pa4" data-note="w10p-a4"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="capstone" data-label="Capstone">
+    <h2>Capstone Project: From Gene to Body</h2>
+    <p>Choose one human condition with a clear genetic or molecular cause and explain it across <strong>every level of biology</strong> you've studied, from DNA to the whole person to populations. This is your chance to show that the pieces of this course fit together.</p>
+    <div class="card">
+      <strong>Suggested topics:</strong> sickle-cell disease · cystic fibrosis · type 1 diabetes · lactose intolerance (persistence) · hemophilia · Huntington's disease · phenylketonuria (PKU) · Duchenne muscular dystrophy · red-green color blindness · familial hypercholesterolemia · β-thalassemia · Tay–Sachs disease · or your own choice (perhaps something that affects someone you know).
+    </div>
+    <div class="field"><label for="cap-topic">My topic</label><input type="text" id="cap-topic" data-note="cap-topic" style="width:100%" placeholder="e.g., Cystic fibrosis"></div>
+    <h3>Write your report (about 1,000–1,500 words total)</h3>
+    <div class="field"><label for="cap1">1. The gene and the molecule (Weeks 2, 5, 6). <span class="hint">Which gene? Which chromosome? What protein does it make and what does the protein normally do? What kind of mutation causes the condition (missense, nonsense, frameshift, deletion, repeat expansion)?</span></label><textarea id="cap1" data-note="cap-1" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap2">2. The cell (Weeks 3, 4). <span class="hint">Where in the cell does the protein work (membrane, cytoplasm, organelle)? What goes wrong at the cellular level when it's faulty?</span></label><textarea id="cap2" data-note="cap-2" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap3">3. The body (Weeks 9, 10). <span class="hint">Which tissues, organs and systems are affected? What symptoms result, and why? Which homeostatic processes are disrupted?</span></label><textarea id="cap3" data-note="cap-3" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap4">4. Inheritance (Week 7). <span class="hint">Is it autosomal or X-linked, dominant or recessive? Draw (on paper) and describe a Punnett square for two carrier parents, or an affected and an unaffected parent. What are the odds for each child?</span></label><textarea id="cap4" data-note="cap-4" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap5">5. Populations & evolution (Week 8). <span class="hint">How common is it, and in which populations? Use Hardy–Weinberg to estimate the carrier frequency. Is there evidence of selection (e.g., heterozygote advantage) or a founder effect?</span></label><textarea id="cap5" data-note="cap-5" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap6">6. Diagnosis, treatment & the future (Week 8). <span class="hint">How is it diagnosed (e.g., newborn screening, genetic testing)? How is it treated today? Are gene therapies or CRISPR approaches being developed? What ethical questions arise?</span></label><textarea id="cap6" data-note="cap-6" style="min-height:150px"></textarea></div>
+    <div class="field"><label for="cap7">7. Sources. <span class="hint">List at least 3 reliable sources, e.g., MedlinePlus Genetics, NIH/NHGRI, OpenStax, CDC, peer-reviewed reviews, patient organizations.</span></label><textarea id="cap7" data-note="cap-7"></textarea></div>
+    <h3>Self-assessment rubric</h3>
+    <div class="table-scroll"><table class="simple">
+      <tr><th>Criterion</th><th>Excellent (4)</th><th>Good (3)</th><th>Developing (2)</th><th>Beginning (1)</th></tr>
+      <tr><td>Molecular accuracy</td><td>Gene, protein, mutation type and effect correctly explained</td><td>Mostly correct with minor gaps</td><td>Some errors or vague</td><td>Missing or incorrect</td></tr>
+      <tr><td>Connecting levels</td><td>Clear cause-and-effect chain from DNA to symptoms</td><td>Most links explained</td><td>Levels described separately</td><td>Few connections</td></tr>
+      <tr><td>Inheritance & population</td><td>Correct pattern, Punnett square and HW estimate</td><td>Correct pattern, minor errors</td><td>Pattern stated, not shown</td><td>Missing</td></tr>
+      <tr><td>Treatment & ethics</td><td>Current and emerging treatments with thoughtful ethics</td><td>Treatments described</td><td>Brief mention</td><td>Missing</td></tr>
+      <tr><td>Sources & clarity</td><td>3+ reliable sources, clear writing</td><td>2–3 sources, mostly clear</td><td>1 source or unclear</td><td>No sources</td></tr>
+    </table></div>
+    <div class="field"><label for="cap-score">My rubric self-score (out of 20) and what I'd improve:</label><textarea id="cap-score" data-note="cap-score"></textarea></div>
+    <div class="btn-row"><button data-complete="capstone"></button><button class="btn" onclick="window.print()">🖨 Print / save as PDF</button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 10 Quiz</h2>
+    <div class="quiz" data-quiz="10"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+  document.addEventListener("bio:ready", function () {
+    var c = document.getElementById("w10-c"), out = document.getElementById("w10-v");
+    c.addEventListener("input", function () {
+      var d = parseFloat(c.value) / Math.PI;
+      out.textContent = d > 0 ? ((Math.PI / 6) * d * d * d / 1000).toFixed(2) : "—";
+    });
+  });
+</script>
+</body>
+</html>

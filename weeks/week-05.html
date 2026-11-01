@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 5 · DNA: Structure & Replication | Bio 101</title>
+<meta name="description" content="Bio 101 Week 5: the discovery and structure of DNA, chromosomes, the genome and DNA replication.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week05.js"></script>
+</head>
+<body data-root=".." data-week="5">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 5 of 10</div>
+    <h1>DNA: Structure & Replication</h1>
+    <p>Inside almost every one of your cells is about two meters of DNA carrying roughly 6 billion letters of code. This week we discover how scientists figured out its structure, and how a cell copies it with astonishing accuracy.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Summarize the key experiments showing that DNA is the genetic material.</li>
+          <li>Describe the structure of DNA: nucleotides, base pairing, antiparallel strands, double helix.</li>
+          <li>Apply Chargaff's rules and write complementary sequences.</li>
+          <li>Explain how DNA is packaged into chromosomes and what a genome is.</li>
+          <li>Describe semiconservative replication and the roles of helicase, primase, DNA polymerase and ligase.</li>
+          <li>Explain leading vs. lagging strand synthesis and the role of telomeres.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~50 min)</li>
+          <li data-item="lab">Virtual labs: Base pairing, Chargaff, Replication fork (~45 min)</li>
+          <li data-item="practical">Practical: Extract DNA from strawberries (~40 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/14-introduction" target="_blank" rel="noopener">Ch. 14 DNA Structure and Function</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> strawberries, dish soap, salt, a zip-top bag, a coffee filter, a clear glass, and <strong>ice-cold</strong> rubbing alcohol (70–91% isopropyl, chilled in the freezer for a few hours).</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. The hunt for the genetic material</h2>
+      <p>By the 1940s, scientists knew genes were on chromosomes, which are made of protein and DNA. Most bet on protein: with 20 amino acids it seemed far more complex than DNA's mere four bases. A series of clever experiments proved them wrong.</p>
+      <ul>
+        <li><strong>Griffith (1928)</strong> found that a harmless strain of pneumonia bacteria could be <em>transformed</em> into a deadly one by mixing it with heat-killed deadly bacteria. Some "transforming principle" was passing between them.</li>
+        <li><strong>Avery, MacLeod and McCarty (1944)</strong> destroyed each type of molecule in turn. Destroying proteins or RNA didn't stop transformation, but destroying DNA did. DNA was the transforming principle.</li>
+        <li><strong>Hershey and Chase (1952)</strong> labeled viruses that infect bacteria with radioactive tags: sulfur for protein, phosphorus for DNA. Only the DNA entered the bacteria to make new viruses. That settled it.</li>
+      </ul>
+
+      <h2>2. The double helix</h2>
+      <p>In 1952, <strong>Rosalind Franklin</strong> and her student Raymond Gosling produced X-ray diffraction images of DNA, most famously <em>Photo 51</em>. Its X-shaped pattern revealed a helix with regular repeating dimensions. Combined with <strong>Chargaff's rules</strong> (in any DNA sample, %A = %T and %G = %C), <strong>James Watson and Francis Crick</strong> built their famous model in 1953. Watson, Crick and Maurice Wilkins received the Nobel Prize in 1962. Franklin had died of cancer in 1958 at age 37, and the prize is not awarded posthumously. Her essential role is now widely recognized.</p>
+      <p>The structure is elegant:</p>
+      <ul>
+        <li>Each strand is a chain of <strong>nucleotides</strong>, each made of a deoxyribose sugar, a phosphate and one of four bases: <span class="b-A">A</span>denine, <span class="b-T">T</span>hymine, <span class="b-G">G</span>uanine, <span class="b-C">C</span>ytosine.</li>
+        <li>The sugars and phosphates form the <strong>backbone</strong> on the outside, like the rails of a ladder. The bases point inward like rungs.</li>
+        <li>Bases pair by <strong>hydrogen bonds</strong>: <strong>A with T (2 bonds)</strong> and <strong>G with C (3 bonds)</strong>. A double-ring <em>purine</em> (A, G) always pairs with a single-ring <em>pyrimidine</em> (T, C), keeping the ladder a uniform 2 nm wide. This pairing explains Chargaff's rules.</li>
+        <li>The two strands are <strong>antiparallel</strong>: one runs 5'→3', the other 3'→5'. (The numbers refer to carbon atoms in the sugar; the 5' end has a free phosphate and the 3' end a free –OH.)</li>
+        <li>The ladder twists into a right-handed <strong>double helix</strong>, completing one turn about every 10 base pairs.</li>
+      </ul>
+      <figure>
+        <svg viewBox="0 0 420 170" width="420" role="img" aria-label="Short DNA segment showing base pairs and hydrogen bonds">
+          <g font-family="ui-monospace,monospace" font-size="15" font-weight="700" text-anchor="middle">
+            <line x1="40" y1="30" x2="380" y2="30" stroke="#2a6fc9" stroke-width="6"/><line x1="40" y1="140" x2="380" y2="140" stroke="#2a6fc9" stroke-width="6"/>
+            <g>
+              <rect x="50" y="36" width="44" height="34" rx="6" fill="#d9534f"/><text x="72" y="59" fill="#fff">A</text><rect x="50" y="100" width="44" height="34" rx="6" fill="#e0a800"/><text x="72" y="123" fill="#fff">T</text>
+              <rect x="118" y="36" width="44" height="34" rx="6" fill="#2e8b57"/><text x="140" y="59" fill="#fff">G</text><rect x="118" y="100" width="44" height="34" rx="6" fill="#3a6fd8"/><text x="140" y="123" fill="#fff">C</text>
+              <rect x="186" y="36" width="44" height="34" rx="6" fill="#3a6fd8"/><text x="208" y="59" fill="#fff">C</text><rect x="186" y="100" width="44" height="34" rx="6" fill="#2e8b57"/><text x="208" y="123" fill="#fff">G</text>
+              <rect x="254" y="36" width="44" height="34" rx="6" fill="#e0a800"/><text x="276" y="59" fill="#fff">T</text><rect x="254" y="100" width="44" height="34" rx="6" fill="#d9534f"/><text x="276" y="123" fill="#fff">A</text>
+              <rect x="322" y="36" width="44" height="34" rx="6" fill="#d9534f"/><text x="344" y="59" fill="#fff">A</text><rect x="322" y="100" width="44" height="34" rx="6" fill="#e0a800"/><text x="344" y="123" fill="#fff">T</text>
+            </g>
+            <g stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5">
+              <path d="M68 72v26M76 72v26"/><path d="M134 72v26M140 72v26M146 72v26"/><path d="M202 72v26M208 72v26M214 72v26"/><path d="M272 72v26M280 72v26"/><path d="M340 72v26M348 72v26"/>
+            </g>
+            <g font-family="system-ui" font-size="12" font-weight="400" fill="currentColor"><text x="22" y="34">5'</text><text x="398" y="34">3'</text><text x="22" y="144">3'</text><text x="398" y="144">5'</text><text x="210" y="163">sugar–phosphate backbones (blue); dashed lines = hydrogen bonds</text></g>
+          </g>
+        </svg>
+        <figcaption>Figure 5.1: Complementary, antiparallel strands. A–T pairs share 2 hydrogen bonds and G–C pairs share 3.</figcaption>
+      </figure>
+      <p>The most important consequence of base pairing: <strong>each strand contains all the information needed to rebuild the other.</strong> If one strand reads 5'-ATGCCA-3', its partner must read 3'-TACGGT-5'. As Watson and Crick wrote with famous understatement, this "immediately suggests a possible copying mechanism."</p>
+
+      <details class="check"><summary>A DNA sample is 22% cytosine. What are the percentages of the other bases?</summary>
+        <p>G = C = 22%, so G + C = 44%. The remaining 56% splits equally: A = T = 28%.</p>
+      </details>
+
+      <h2>3. Chromosomes, genes and genomes</h2>
+      <p>If you stretched out the DNA from one human cell it would be about 2 meters long, yet it fits in a nucleus about 6 µm wide. That's like packing 40 km of thread into a tennis ball. The trick is packaging:</p>
+      <ol>
+        <li>DNA wraps around spools of proteins called <strong>histones</strong>, forming <strong>nucleosomes</strong> ("beads on a string").</li>
+        <li>Nucleosomes coil into thicker fibers, which loop and fold.</li>
+        <li>Before cell division, chromosomes condense further into the familiar X-shaped structures (two copied <em>sister chromatids</em> joined at a <em>centromere</em>).</li>
+      </ol>
+      <p>Humans have <strong>46 chromosomes</strong> in 23 pairs: 22 pairs of <em>autosomes</em> plus the sex chromosomes (XX or XY). One set of 23 comes from each parent. Your complete set of DNA is your <strong>genome</strong>, about 3.1 billion base pairs per set. A <strong>gene</strong> is a stretch of DNA that codes for a functional product, usually a protein. Humans have only about 20,000 protein-coding genes, making up less than 2% of the genome. Much of the rest regulates genes, provides structure, or is made of ancient viral and repetitive sequences whose functions are still being studied.</p>
+      <div class="callout human"><span class="callout-title">🧬 Human connection: the Human Genome Project</span>
+        <p>Launched in 1990 and declared essentially complete in 2003, the Human Genome Project cost about $3 billion to read one human genome. In 2022 the Telomere-to-Telomere consortium filled in the last gaps. Today a whole genome can be sequenced for a few hundred dollars in about a day, which is transforming medicine, ancestry research and forensics (Week 8).</p>
+      </div>
+
+      <h2>4. DNA replication</h2>
+      <p>Before a cell divides, it must copy all of its DNA, and do so accurately. Replication is <strong>semiconservative</strong>: the two strands separate, each serves as a template, and each new double helix contains one original strand and one new strand. Matthew Meselson and Franklin Stahl confirmed this in 1958 by growing bacteria in "heavy" nitrogen and tracking the DNA's density over generations.</p>
+      <h3>The replication crew</h3>
+      <div class="table-scroll"><table class="simple">
+        <tr><th>Enzyme</th><th>Job</th></tr>
+        <tr><td>Helicase</td><td>Unwinds and unzips the double helix, creating a replication fork</td></tr>
+        <tr><td>Topoisomerase</td><td>Relieves the tension from twisting ahead of the fork</td></tr>
+        <tr><td>Primase</td><td>Lays down a short RNA primer, because polymerase can't start a new strand from nothing</td></tr>
+        <tr><td>DNA polymerase</td><td>Adds complementary nucleotides to the 3' end of the growing strand, and proofreads</td></tr>
+        <tr><td>DNA ligase</td><td>Seals the gaps between DNA fragments</td></tr>
+      </table></div>
+      <h3>Leading and lagging strands</h3>
+      <p>DNA polymerase has one strict rule: it can only build in the <strong>5'→3' direction</strong>. Because the two template strands are antiparallel, this creates a problem at the fork:</p>
+      <ul>
+        <li>The <strong>leading strand</strong> is built continuously, chasing the fork as it opens.</li>
+        <li>The <strong>lagging strand</strong> must be built away from the fork, in short pieces called <strong>Okazaki fragments</strong>, each started by its own primer. Ligase then stitches them together.</li>
+      </ul>
+      <p>Replication starts at thousands of <em>origins</em> along each human chromosome at once, so the whole genome can be copied in a few hours. Proofreading and repair systems bring the error rate down to about <strong>one mistake per billion bases</strong>, a handful of new changes each time a cell divides. Those rare errors are mutations, the raw material of both disease and evolution (Weeks 6 and 8).</p>
+      <h3>Telomeres: the end-replication problem</h3>
+      <p>At the very tip of a linear chromosome, the lagging strand can't be completed, so chromosomes lose a little DNA with each division. Protective caps called <strong>telomeres</strong> (thousands of repeats of TTAGGG) act as buffers. In most body cells they shorten over a lifetime, and very short telomeres trigger cells to stop dividing, a factor in aging. Stem cells, and about 90% of cancers, use the enzyme <strong>telomerase</strong> to rebuild telomeres and keep dividing.</p>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>Griffith, Avery and Hershey–Chase showed that DNA is the genetic material. Franklin's data and Watson & Crick's model revealed its structure.</li>
+          <li>DNA is a double helix of antiparallel strands with A–T and G–C base pairs.</li>
+          <li>Humans have 46 chromosomes and a genome of ~3.1 billion base pairs with ~20,000 genes.</li>
+          <li>Replication is semiconservative: helicase unzips, primase primes, polymerase builds 5'→3' and ligase seals.</li>
+          <li>The leading strand is built continuously and the lagging strand in Okazaki fragments. Telomeres protect chromosome ends.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="basepair"></div>
+    <div data-lab="chargaff"></div>
+    <div data-lab="replication"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Extract DNA from Strawberries</h2>
+    <p>Strawberries are perfect for DNA extraction: they're soft, and they're <em>octoploid</em>, with 8 copies of each chromosome, so they're loaded with DNA. You'll break open the cells, strip away the proteins, and make the DNA visible to the naked eye.</p>
+    <div class="callout safety"><span class="callout-title">⚠️ Safety</span>Rubbing alcohol is flammable and toxic. Keep it away from flames and don't drink it. Work in a ventilated space and wash your hands after.</div>
+    <div class="two-col">
+      <div>
+        <h3>Materials</h3>
+        <ul>
+          <li>2–3 strawberries (green tops removed)</li>
+          <li>Zip-top bag</li>
+          <li><strong>Extraction buffer:</strong> ½ cup water + 2 tsp dish soap + ½ tsp salt, stirred gently</li>
+          <li>Coffee filter or paper towel, and a funnel or cup</li>
+          <li>Tall clear glass or test tube</li>
+          <li>Ice-cold rubbing alcohol (chilled in the freezer)</li>
+          <li>Wooden skewer or toothpick</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Procedure</h3>
+        <ol>
+          <li>Put the strawberries in the bag, seal it, and mash for 2 minutes. <em>(Mechanically breaks cell walls.)</em></li>
+          <li>Add 3 tablespoons of extraction buffer, reseal, and mash gently for 1 more minute without making too many bubbles. <em>(Soap dissolves the membranes; salt helps the DNA clump.)</em></li>
+          <li>Filter the mush through the coffee filter into the glass until you have about 2 cm of liquid.</li>
+          <li>Tilt the glass and <strong>slowly</strong> pour cold alcohol down the side to form a layer about as deep as the strawberry liquid. Don't mix!</li>
+          <li>Wait 1–2 minutes. White, cloudy, stringy material will appear at the boundary and float up. <strong>That's DNA</strong>, millions of strands clumped together.</li>
+          <li>Twirl the skewer at the boundary to spool the DNA.</li>
+        </ol>
+      </div>
+    </div>
+    <h3>Observations</h3>
+    <table class="datatable" data-id="w5p" data-cols='["Observation","Your notes"]' data-rows='["Color & texture of DNA","Amount (estimate)","Time for DNA to appear","Where it formed","Anything unexpected"]'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w5pa1">1. What was the role of each step: mashing, soap, salt, filtering and cold alcohol?</label><textarea id="w5pa1" data-note="w5p-a1"></textarea></div>
+    <div class="field"><label for="w5pa2">2. You can't see the double helix in your sample. Why not? What are you actually seeing?</label><textarea id="w5pa2" data-note="w5p-a2"></textarea></div>
+    <div class="field"><label for="w5pa3">3. Would this work with your own cheek cells? (Try it: swish salty water in your mouth for 30 s, then use the same buffer and alcohol.)</label><textarea id="w5pa3" data-note="w5p-a3"></textarea></div>
+    <div class="field"><label for="w5pa4">4. Your sample also contains RNA and some protein. How could a real lab purify the DNA further? (Hint: enzymes from Week 2.)</label><textarea id="w5pa4" data-note="w5p-a4"></textarea></div>
+    <div class="callout"><span class="callout-title">Extension: build a model</span>Build a 12-base-pair DNA model from candy (licorice backbones, colored gummies for bases, toothpicks for bonds) or paper strips. Use your complementary strand from Lab 5A. Twist it into a helix, then "unzip" it to demonstrate replication.</div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 5 Quiz</h2>
+    <div class="quiz" data-quiz="5"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>

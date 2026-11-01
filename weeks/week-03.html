@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 3 · Cells & Membranes | Bio 101</title>
+<meta name="description" content="Bio 101 Week 3: cell theory, prokaryotes and eukaryotes, organelles, membranes and transport.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week03.js"></script>
+</head>
+<body data-root=".." data-week="3">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 3 of 10</div>
+    <h1>Cells & Membranes</h1>
+    <p>You are made of roughly 30 trillion cells, each a busy, walled city. This week we tour the city's districts and learn how its border, the membrane, decides what gets in and out.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>State the three principles of cell theory.</li>
+          <li>Compare prokaryotic and eukaryotic cells, and plant and animal cells.</li>
+          <li>Identify the major organelles and describe their functions.</li>
+          <li>Describe the fluid mosaic model of the plasma membrane.</li>
+          <li>Distinguish diffusion, osmosis, facilitated diffusion, active transport and bulk transport.</li>
+          <li>Predict how cells respond to hypotonic, isotonic and hypertonic solutions.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~50 min)</li>
+          <li data-item="lab">Virtual labs: Cell Explorer, Osmosis, SA:V (~50 min)</li>
+          <li data-item="practical">Practical: Potato osmosis (~30 min + overnight)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/4-introduction" target="_blank" rel="noopener">Ch. 4 Cell Structure</a> and
+          <a href="https://openstax.org/books/biology-2e/pages/5-introduction" target="_blank" rel="noopener">Ch. 5 Structure and Function of Plasma Membranes</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> 1–2 potatoes, table salt, 5 cups, a kitchen scale (0.1 g if possible), a knife or apple corer, and paper towels.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. The cell theory</h2>
+      <p>In 1665 Robert Hooke peered at cork through a crude microscope and saw tiny boxes he called "cells." Shortly after, Antonie van Leeuwenhoek saw living "animalcules" (bacteria and protists) swimming in pond water and dental plaque. By the mid-1800s, Schleiden, Schwann and Virchow had pulled the evidence together into <strong>cell theory</strong>:</p>
+      <ol>
+        <li>All living things are made of one or more cells.</li>
+        <li>The cell is the basic unit of structure and function in living things.</li>
+        <li>All cells come from pre-existing cells.</li>
+      </ol>
+      <p>The third principle (Virchow's <em>omnis cellula e cellula</em>) has a profound implication: every cell in your body descends, through an unbroken chain of divisions, from a single fertilized egg, and ultimately from the first cells on Earth ~3.5–4 billion years ago.</p>
+      <p>Most cells are microscopic: a typical human cell is 10–30 micrometers (µm) across, and a bacterium 1–2 µm. Why so small? As a cell grows, its volume increases faster than its surface area. Since everything the cell needs must cross its surface, a cell that's too big can't supply its interior. You'll explore this in Lab 3C.</p>
+
+      <h2>2. Two kinds of cells</h2>
+      <div class="table-scroll"><table class="simple">
+        <tr><th></th><th>Prokaryotic cells</th><th>Eukaryotic cells</th></tr>
+        <tr><td>Who</td><td>Bacteria and archaea</td><td>Animals, plants, fungi, protists</td></tr>
+        <tr><td>Nucleus</td><td>No. DNA sits in a region called the nucleoid</td><td>Yes. DNA is enclosed in a nuclear envelope</td></tr>
+        <tr><td>Membrane-bound organelles</td><td>None</td><td>Many (mitochondria, ER, Golgi…)</td></tr>
+        <tr><td>Size</td><td>~1–5 µm</td><td>~10–100 µm</td></tr>
+        <tr><td>DNA</td><td>Usually one circular chromosome, plus plasmids</td><td>Multiple linear chromosomes</td></tr>
+        <tr><td>Shared features</td><td colspan="2">Plasma membrane, cytoplasm, ribosomes, DNA</td></tr>
+      </table></div>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: you are outnumbered</span>
+        <p>Your body hosts roughly as many bacterial cells as human cells, about 38 trillion, mostly in your gut. Because bacteria are so small, they weigh only about 0.2 kg in total. These microbes help digest food, make vitamin K and train your immune system (Week 10).</p>
+      </div>
+
+      <h2>3. A tour of the eukaryotic cell</h2>
+      <p>Think of the eukaryotic cell as a factory city. Use the <strong>Cell Explorer</strong> in the Virtual Lab alongside this section.</p>
+      <h3>Information headquarters</h3>
+      <ul>
+        <li><strong>Nucleus:</strong> houses DNA and controls which genes are used. Its double-membrane <em>envelope</em> is perforated by nuclear pores that let mRNA out. Inside, the <strong>nucleolus</strong> builds ribosome parts.</li>
+      </ul>
+      <h3>The production line (the endomembrane system)</h3>
+      <ul>
+        <li><strong>Ribosomes:</strong> the protein builders. Free ribosomes make proteins used in the cytoplasm. Ribosomes on the ER make proteins for export or for membranes.</li>
+        <li><strong>Rough ER:</strong> folds and modifies new proteins.</li>
+        <li><strong>Smooth ER:</strong> makes lipids and steroid hormones, detoxifies drugs (abundant in liver cells), and stores calcium (in muscle).</li>
+        <li><strong>Golgi apparatus:</strong> the shipping department. It receives vesicles from the ER, modifies proteins (e.g., adding sugar tags), sorts them and ships them out.</li>
+        <li><strong>Vesicles</strong> carry cargo between compartments and to the cell surface.</li>
+        <li><strong>Lysosomes:</strong> recycling centers full of digestive enzymes that break down old organelles and engulfed invaders.</li>
+      </ul>
+      <p>Follow a protein hormone like insulin through the system: <strong>gene (nucleus) → mRNA → ribosome on rough ER → Golgi → vesicle → released at the membrane.</strong></p>
+      <h3>Power plants</h3>
+      <ul>
+        <li><strong>Mitochondria</strong> carry out cellular respiration, converting food energy into ATP (Week 4). They have a folded inner membrane (<em>cristae</em>) and their own DNA.</li>
+        <li><strong>Chloroplasts</strong> (plants and algae) capture light energy through photosynthesis.</li>
+      </ul>
+      <p>Mitochondria and chloroplasts are about the size of bacteria, have their own circular DNA and bacteria-like ribosomes, and divide by splitting. The <strong>endosymbiotic theory</strong> proposes they were once free-living bacteria that were engulfed by an ancestral cell more than 1.5 billion years ago and never left.</p>
+      <h3>Structure and movement</h3>
+      <ul>
+        <li><strong>Cytoskeleton:</strong> protein fibers that give the cell shape and act as tracks. <em>Microfilaments</em> (actin) drive muscle contraction and cell crawling, <em>microtubules</em> form the spindle during division and the core of cilia and flagella, and <em>intermediate filaments</em> provide tensile strength.</li>
+        <li><strong>Cilia and flagella:</strong> cilia in your airways sweep mucus upward, and sperm swim with a flagellum.</li>
+      </ul>
+      <h3>Plant extras</h3>
+      <p>Plant cells add a rigid <strong>cellulose cell wall</strong>, <strong>chloroplasts</strong> and a large <strong>central vacuole</strong> that presses outward to keep the plant firm. Note: plant cells <em>also</em> have mitochondria.</p>
+
+      <details class="check"><summary>White blood cells that eat bacteria would be rich in which organelle?</summary>
+        <p>Lysosomes, the organelles that digest engulfed bacteria.</p>
+      </details>
+
+      <h2>4. The plasma membrane: a selective border</h2>
+      <p>Every cell is wrapped in a <strong>plasma membrane</strong> just ~7–10 nanometers thick. It's described by the <strong>fluid mosaic model</strong>: a <em>fluid</em> bilayer of phospholipids (heads facing water, tails hidden inside) with a <em>mosaic</em> of proteins floating in it. Cholesterol tucked between phospholipids keeps fluidity just right. Membrane proteins act as channels, pumps, receptors for hormones, enzymes and ID tags. Carbohydrate chains on the outer surface (the glycocalyx) act as "name badges": your ABO blood type is one of them.</p>
+      <p>The membrane is <strong>selectively permeable</strong>. Small nonpolar molecules (O₂, CO₂) slip right through the oily core. Ions and larger polar molecules (glucose, Na⁺) need protein help.</p>
+
+      <figure>
+        <svg viewBox="0 0 440 170" width="440" role="img" aria-label="Phospholipid bilayer with a channel protein">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 45 v35 M28 45 v35 M50 45 v35 M58 45 v35 M80 45 v35 M88 45 v35 M110 45 v35 M118 45 v35 M140 45 v35 M148 45 v35 M300 45 v35 M308 45 v35 M330 45 v35 M338 45 v35 M360 45 v35 M368 45 v35 M390 45 v35 M398 45 v35 M420 45 v35 M428 45 v35"/>
+            <path d="M20 90 v35 M28 90 v35 M50 90 v35 M58 90 v35 M80 90 v35 M88 90 v35 M110 90 v35 M118 90 v35 M140 90 v35 M148 90 v35 M300 90 v35 M308 90 v35 M330 90 v35 M338 90 v35 M360 90 v35 M368 90 v35 M390 90 v35 M398 90 v35 M420 90 v35 M428 90 v35"/>
+          </g>
+          <g fill="#2a6fc9">
+            <circle cx="24" cy="38" r="9"/><circle cx="54" cy="38" r="9"/><circle cx="84" cy="38" r="9"/><circle cx="114" cy="38" r="9"/><circle cx="144" cy="38" r="9"/><circle cx="304" cy="38" r="9"/><circle cx="334" cy="38" r="9"/><circle cx="364" cy="38" r="9"/><circle cx="394" cy="38" r="9"/><circle cx="424" cy="38" r="9"/>
+            <circle cx="24" cy="132" r="9"/><circle cx="54" cy="132" r="9"/><circle cx="84" cy="132" r="9"/><circle cx="114" cy="132" r="9"/><circle cx="144" cy="132" r="9"/><circle cx="304" cy="132" r="9"/><circle cx="334" cy="132" r="9"/><circle cx="364" cy="132" r="9"/><circle cx="394" cy="132" r="9"/><circle cx="424" cy="132" r="9"/>
+          </g>
+          <path d="M170 25 h40 v120 h-40 z M235 25 h40 v120 h-40 z" fill="#6b4fbb" opacity=".8"/>
+          <path d="M222 10 v150" stroke="#d0661c" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+          <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#d0661c"/></marker></defs>
+          <g font-family="system-ui" font-size="11" fill="currentColor"><text x="4" y="164">hydrophilic heads (blue), hydrophobic tails (lines)</text><text x="286" y="164">channel protein (purple)</text></g>
+        </svg>
+        <figcaption>Figure 3.1: The phospholipid bilayer. Ions cross only through protein channels or pumps.</figcaption>
+      </figure>
+
+      <h2>5. Moving across the membrane</h2>
+      <h3>Passive transport (no energy needed)</h3>
+      <ul>
+        <li><strong>Diffusion:</strong> molecules spread from high to low concentration, down their <em>concentration gradient</em>. O₂ diffuses from your lungs into your blood this way.</li>
+        <li><strong>Facilitated diffusion:</strong> still downhill, but through channel or carrier proteins (e.g., glucose transporters, water channels called <em>aquaporins</em>).</li>
+        <li><strong>Osmosis:</strong> diffusion of <em>water</em> across a selectively permeable membrane. Water moves toward the side with more dissolved solute (and therefore relatively less free water).</li>
+      </ul>
+      <p>Compared with the inside of a cell, a solution can be:</p>
+      <ul>
+        <li><strong>Hypotonic</strong> (less solute outside): water rushes in. Animal cells swell and may burst (<em>lyse</em>). Plant cells become firm (<em>turgid</em>), which is healthy for them because the wall resists bursting.</li>
+        <li><strong>Isotonic</strong> (equal): no net movement. This is why IV fluids are 0.9% saline.</li>
+        <li><strong>Hypertonic</strong> (more solute outside): water leaves. Animal cells shrivel (<em>crenate</em>) and plant cells <em>plasmolyze</em>. Salt-curing meat works because bacteria shrivel in hypertonic salt.</li>
+      </ul>
+      <h3>Active transport (requires energy)</h3>
+      <p>Moving something <em>against</em> its gradient costs energy, usually ATP. The star example is the <strong>sodium–potassium pump</strong>, which pushes 3 Na⁺ out and brings 2 K⁺ in for each ATP. It is estimated to use 20–25% of your resting energy, and much more in the brain, because every nerve impulse depends on the gradients it builds (Week 9).</p>
+      <h3>Bulk transport</h3>
+      <p>Large items move in membrane-wrapped packages. <strong>Endocytosis</strong> brings material in, as when white blood cells engulf bacteria (<em>phagocytosis</em>) or cells take in cholesterol-carrying LDL particles. <strong>Exocytosis</strong> releases material, as when cells secrete hormones, neurotransmitters and digestive enzymes.</p>
+
+      <div class="callout human"><span class="callout-title">🫀 Human connection: cystic fibrosis</span>
+        <p>Cystic fibrosis is caused by mutations in a single membrane channel protein, CFTR, which moves chloride ions out of cells. When it fails, less water follows by osmosis, and the mucus in the lungs and pancreas becomes thick and sticky. Newer drugs called CFTR modulators help the faulty protein fold and open, and have transformed treatment for many patients.</p>
+      </div>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>All living things are made of cells, and all cells come from cells.</li>
+          <li>Prokaryotes lack a nucleus and organelles. Eukaryotes have both.</li>
+          <li>Proteins are made at ribosomes, processed in the ER and Golgi, and shipped in vesicles. Mitochondria make ATP.</li>
+          <li>The membrane is a fluid mosaic of lipids and proteins that controls traffic.</li>
+          <li>Passive transport goes down gradients for free. Active transport goes against them using ATP.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="cell"></div>
+    <div data-lab="osmosis"></div>
+    <div data-lab="sav"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Potato Osmosis</h2>
+    <p>You'll find the salt concentration that's <em>isotonic</em> to potato cells by measuring how much mass potato pieces gain or lose in different salt solutions.</p>
+    <div class="callout safety"><span class="callout-title">⚠️ Safety</span>Take care with knives; have an adult help with cutting. Don't eat the samples afterward.</div>
+    <div class="two-col">
+      <div>
+        <h3>Materials</h3>
+        <ul>
+          <li>1–2 potatoes, cut into 5 equal pieces (e.g., 1 × 1 × 4 cm strips, or "fries")</li>
+          <li>Table salt and a measuring spoon</li>
+          <li>5 cups, each with 200 mL water</li>
+          <li>Kitchen scale (ideally reading to 0.1 g), paper towels, marker</li>
+        </ul>
+        <h3>Making solutions</h3>
+        <p class="small">Dissolve salt into 200 mL water: 0 g · 2 g (~⅓ tsp) · 4 g (~⅔ tsp) · 10 g (~1¾ tsp) · 20 g (~3½ tsp). That gives roughly 0%, 1%, 2%, 5% and 10% salt.</p>
+      </div>
+      <div>
+        <h3>Procedure</h3>
+        <ol>
+          <li>Pat each potato piece dry, weigh it and record its <strong>initial mass</strong>.</li>
+          <li>Place one piece in each solution. Note how firm or floppy it feels.</li>
+          <li>Leave for at least 2 hours (overnight is better).</li>
+          <li>Remove, blot gently and the same way each time, and record the <strong>final mass</strong>. Note the texture.</li>
+          <li>Calculate: <code>% change = (final − initial) ÷ initial × 100</code>.</li>
+          <li>The chart below plots your data automatically. Where does the line cross 0% change?</li>
+        </ol>
+      </div>
+    </div>
+    <h3>Data table</h3>
+    <p class="small muted">The first column is the salt % (used as the x-axis). Enter numbers only in the % change column for the chart.</p>
+    <table class="datatable" data-id="w3p" data-cols='["Salt %","Initial mass (g)","Final mass (g)","% change","Texture (firm/floppy)"]' data-rows='["0","1","2","5","10"]' data-chart='{"x":0,"y":[3],"xLabel":"Salt concentration (%)","yLabel":"% change in mass"}'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w3pa1">1. Which solutions were hypotonic and which hypertonic to the potato cells? How do you know?</label><textarea id="w3pa1" data-note="w3p-a1"></textarea></div>
+    <div class="field"><label for="w3pa2">2. Estimate the salt concentration that is isotonic to potato cells (where the line crosses 0%).</label><textarea id="w3pa2" data-note="w3p-a2"></textarea></div>
+    <div class="field"><label for="w3pa3">3. Why do we use % change rather than just the change in grams?</label><textarea id="w3pa3" data-note="w3p-a3"></textarea></div>
+    <div class="field"><label for="w3pa4">4. Explain the texture changes using the words turgid and plasmolyzed.</label><textarea id="w3pa4" data-note="w3p-a4"></textarea></div>
+    <div class="callout"><span class="callout-title">Extension: the naked egg</span>Soak a raw egg in vinegar for 1–2 days until the shell dissolves (acid + calcium carbonate → CO₂ bubbles!). Then move it to corn syrup overnight and then to water overnight, measuring its circumference each time. The egg's membrane is a giant model of a cell membrane.</div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 3 Quiz</h2>
+    <div class="quiz" data-quiz="3"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>

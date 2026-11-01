@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 8 · Evolution & Biotechnology | Bio 101</title>
+<meta name="description" content="Bio 101 Week 8: natural selection, population genetics, PCR, gel electrophoresis, sequencing and CRISPR.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week08.js"></script>
+</head>
+<body data-root=".." data-week="8">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 8 of 10</div>
+    <h1>Evolution & Biotechnology</h1>
+    <p>"Nothing in biology makes sense except in the light of evolution," wrote geneticist Theodosius Dobzhansky. This week we see how populations change over time, and how humans have learned to read, copy and edit DNA ourselves.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Explain natural selection and the conditions required for it.</li>
+          <li>Describe several independent lines of evidence for evolution.</li>
+          <li>Distinguish natural selection, genetic drift, gene flow and mutation.</li>
+          <li>Use the Hardy–Weinberg equation to estimate allele and carrier frequencies.</li>
+          <li>Explain how restriction enzymes, PCR, gel electrophoresis and DNA sequencing work.</li>
+          <li>Describe CRISPR gene editing and discuss ethical questions in biotechnology.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~60 min)</li>
+          <li data-item="lab">Virtual labs: Peppered moths, Forensic gel, PCR, Hardy–Weinberg (~60 min)</li>
+          <li data-item="practical">Practical: Bird-beak natural selection (~45 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/18-introduction" target="_blank" rel="noopener">Ch. 18 Evolution and the Origin of Species</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/19-introduction" target="_blank" rel="noopener">Ch. 19 The Evolution of Populations</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/17-introduction" target="_blank" rel="noopener">Ch. 17 Biotechnology and Genomics</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> utensils (spoon, fork, tweezers, clothespin or chopsticks), dry foods (rice, beans, pasta, cereal), cups, a timer and a helper or two if possible.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. Darwin's big idea</h2>
+      <p>In 1859, Charles Darwin published <em>On the Origin of Species</em>. Alfred Russel Wallace had independently reached the same idea. Darwin's argument rests on observations anyone can check:</p>
+      <ol>
+        <li><strong>Variation:</strong> individuals in a population differ.</li>
+        <li><strong>Inheritance:</strong> many of those differences are passed to offspring.</li>
+        <li><strong>Overproduction:</strong> more offspring are born than can survive.</li>
+        <li><strong>Differential reproductive success:</strong> individuals whose inherited traits suit their environment tend to survive and reproduce more.</li>
+      </ol>
+      <p>Conclusion: over generations, favorable heritable traits become more common. This is <strong>natural selection</strong>. A trait that improves survival and reproduction in a particular environment is an <strong>adaptation</strong>, and an organism's <strong>fitness</strong> means its reproductive success, not its strength.</p>
+      <p>Three common misconceptions:</p>
+      <ul>
+        <li><em>Individuals don't evolve; populations do.</em> Natural selection acts on individuals, but it's the population's allele frequencies that change.</li>
+        <li><em>Organisms don't evolve "on purpose" or "because they need to."</em> Mutations are random with respect to need; selection then filters them.</li>
+        <li><em>Evolution isn't a ladder toward "higher" forms.</em> It's a branching tree. Humans didn't evolve from modern chimpanzees; we share a common ancestor that lived about 6–7 million years ago.</li>
+      </ul>
+
+      <h2>2. The evidence</h2>
+      <ul>
+        <li><strong>Fossils</strong> show change over time and transitional forms, such as <em>Tiktaalik</em> (fish → tetrapod) and the series of land-to-sea fossils leading to whales.</li>
+        <li><strong>Homologous structures:</strong> the same bone pattern in a human arm, bat wing, whale flipper and cat leg points to common ancestry. <strong>Vestigial structures</strong> are leftovers, such as your tailbone and the tiny muscles that once moved your ears.</li>
+        <li><strong>Embryology:</strong> vertebrate embryos, including human ones, briefly develop pharyngeal arches and a tail.</li>
+        <li><strong>Molecular evidence:</strong> all life uses DNA and the same genetic code. The more closely related two species are, the more similar their DNA. Humans and chimpanzees share about 98–99% of aligned DNA sequence.</li>
+        <li><strong>Biogeography:</strong> island species, like Darwin's finches in the Galápagos, resemble those on the nearest mainland.</li>
+        <li><strong>Direct observation:</strong> peppered moths, antibiotic-resistant bacteria, pesticide-resistant insects and changing beak sizes in Galápagos finches during droughts.</li>
+      </ul>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: antibiotic resistance</span>
+        <p>When you take an antibiotic, most bacteria die. But if a few carry a mutation (or a gene picked up from another bacterium) that lets them survive, they multiply and take over. That's natural selection in days. Overuse of antibiotics in medicine and agriculture has made resistant infections, such as MRSA, a major global health threat. This is why you should take antibiotics only for bacterial infections and exactly as prescribed.</p>
+      </div>
+
+      <h2>3. Mechanisms of evolution</h2>
+      <p>Evolution, at the population level, is a change in <strong>allele frequencies</strong> over generations. Four main forces cause it:</p>
+      <ul>
+        <li><strong>Natural selection:</strong> non-random survival and reproduction. It's the only mechanism that consistently produces adaptation.</li>
+        <li><strong>Genetic drift:</strong> random changes in allele frequency, strongest in small populations. In a <em>bottleneck</em>, a disaster leaves few survivors. In the <em>founder effect</em>, a small group starts a new population. Some genetic conditions are much more common in historically isolated communities for this reason.</li>
+        <li><strong>Gene flow:</strong> migration moves alleles between populations, making them more similar.</li>
+        <li><strong>Mutation:</strong> the ultimate source of all new alleles, though it changes frequencies only slowly by itself.</li>
+      </ul>
+      <h3>Hardy–Weinberg equilibrium</h3>
+      <p>As a baseline, the <strong>Hardy–Weinberg principle</strong> says allele frequencies stay constant if there is no selection, no drift (an infinitely large population), no gene flow, no mutation and random mating. If <em>p</em> = frequency of the dominant allele and <em>q</em> = frequency of the recessive allele:</p>
+      <p style="text-align:center"><strong>p + q = 1</strong> and <strong>p² + 2pq + q² = 1</strong></p>
+      <p>Here p² = homozygous dominant, 2pq = heterozygous (carriers) and q² = homozygous recessive. If 1 in 2,500 babies has cystic fibrosis, q² = 0.0004, so q = 0.02 and 2pq ≈ 0.039. <strong>About 1 in 25 people is a carrier</strong>, and most don't know it.</p>
+      <h3>Speciation</h3>
+      <p>New species form when populations become <strong>reproductively isolated</strong>, often after being separated geographically. Over time, mutation, selection and drift take them in different directions until they can no longer interbreed.</p>
+      <div class="callout human"><span class="callout-title">🧬 Human connection: recent human evolution</span>
+        <p>Modern humans evolved in Africa about 300,000 years ago and spread worldwide within the last ~70,000 years. Many people outside Africa carry 1–2% Neanderthal DNA from interbreeding. Humans are still evolving: lactase persistence spread alongside dairy farming, sickle-cell and other alleles were favored where malaria was common, and high-altitude adaptations evolved in Tibetan, Andean and Ethiopian highlanders.</p>
+      </div>
+
+      <h2>4. Biotechnology: reading and writing DNA</h2>
+      <h3>Restriction enzymes and recombinant DNA</h3>
+      <p>Bacteria defend themselves against viruses with <strong>restriction enzymes</strong>, which cut DNA at specific sequences. For example, EcoRI cuts at GAATTC. Many leave short single-stranded "sticky ends" that can pair with any other DNA cut by the same enzyme. In the 1970s, scientists used them to paste a human gene into a bacterial plasmid, creating <strong>recombinant DNA</strong>. Since 1982, bacteria have been brewing human insulin for people with diabetes. Before that, insulin came from pig and cow pancreases.</p>
+      <h3>PCR: the DNA photocopier</h3>
+      <p>The <strong>polymerase chain reaction</strong>, invented by Kary Mullis in 1983, copies a chosen DNA segment billions of times in a couple of hours. Each cycle has three temperatures: <strong>denature</strong> (~95 °C, which separates strands), <strong>anneal</strong> (~55–65 °C, when short primers bind the targets), and <strong>extend</strong> (~72 °C, when the heat-stable Taq polymerase from hot-spring bacteria copies the DNA). Copies double every cycle: 2³⁰ ≈ 1 billion. PCR underlies COVID testing, forensics, ancestry tests and paternity tests.</p>
+      <h3>Gel electrophoresis</h3>
+      <p>To sort DNA fragments by size, load them into a gel (agarose, a seaweed jelly) and apply an electric current. DNA's phosphate backbone is negative, so fragments move toward the positive electrode. The gel acts as a molecular sieve, so <strong>small fragments travel farther</strong>. A "ladder" of known sizes is used to measure them. Forensic DNA profiling compares the lengths of highly variable repeated regions (STRs) across many sites in the genome.</p>
+      <h3>DNA sequencing</h3>
+      <p>Sequencing reads the exact order of bases. Fred Sanger's method (1977) read hundreds of bases at a time. Modern "next-generation" machines read billions of short fragments in parallel, and newer nanopore devices read long DNA molecules as they thread through a tiny pore. Sequencing now diagnoses rare diseases in newborns, tracks virus variants and guides cancer treatment.</p>
+      <h3>CRISPR-Cas9: editing genes</h3>
+      <p>CRISPR is another bacterial immune system. Bacteria store snippets of viral DNA and use a <strong>guide RNA</strong> plus the <strong>Cas9</strong> enzyme to cut matching viral DNA. Jennifer Doudna and Emmanuelle Charpentier showed in 2012 that the guide RNA can be programmed to target almost any sequence, and they won the 2020 Nobel Prize in Chemistry. After the cut, the cell's repair machinery can disable a gene or insert a new sequence. In 2023, <em>Casgevy</em> became the first approved CRISPR therapy, for sickle-cell disease and β-thalassemia: patients' own blood stem cells are edited to switch fetal hemoglobin back on.</p>
+      <div class="callout warn"><span class="callout-title">⚖️ Ethics to think about</span>
+        <ul>
+          <li><strong>Somatic</strong> editing (body cells) affects only the patient. <strong>Germline</strong> editing (embryos, eggs, sperm) is inherited by future generations. When a researcher edited human embryos in 2018, he was widely condemned and imprisoned.</li>
+          <li>Who can afford gene therapies that cost over $2 million?</li>
+          <li>Consumer DNA tests reveal ancestry and health risks, but also relatives' information. Who owns your genetic data? (In the US, the Genetic Information Nondiscrimination Act limits use by health insurers and employers, but not life insurers.)</li>
+          <li>Should we edit traits that aren't diseases?</li>
+        </ul>
+      </div>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>Natural selection requires heritable variation and differential reproductive success. Populations evolve, not individuals.</li>
+          <li>Evidence comes from fossils, homology, embryology, DNA, biogeography and direct observation.</li>
+          <li>Selection, drift, gene flow and mutation change allele frequencies. Hardy–Weinberg (p² + 2pq + q² = 1) is the no-evolution baseline.</li>
+          <li>Restriction enzymes cut, PCR copies, gels sort by size, sequencing reads and CRISPR edits.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="selection"></div>
+    <div data-lab="gel"></div>
+    <div data-lab="pcr"></div>
+    <div data-lab="hardy"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Bird-Beak Natural Selection</h2>
+    <p>You're a population of birds with different "beaks" (utensils) competing for food on an island. As the food supply changes, which beaks thrive? This classic simulation models how Darwin's finches adapt to drought.</p>
+    <div class="two-col">
+      <div>
+        <h3>Materials</h3>
+        <ul>
+          <li>4 "beaks": spoon, fork, tweezers (or chopsticks), clothespin (or binder clip)</li>
+          <li>Food types: dry beans, rice, pasta shapes, cereal or popcorn</li>
+          <li>A tray or towel as the "island," and a cup ("stomach") for each beak</li>
+          <li>Timer</li>
+        </ul>
+        <p class="small">Solo? Run each beak yourself one at a time, holding the "stomach" cup in your other hand. With friends, each person is one bird.</p>
+      </div>
+      <div>
+        <h3>Procedure</h3>
+        <ol>
+          <li><strong>Round 1 (mixed seeds):</strong> scatter 20 of each food. Each beak collects for 30 seconds. Count items collected.</li>
+          <li><strong>Round 2 (drought: only small seeds):</strong> scatter 60 grains of rice only. Repeat.</li>
+          <li><strong>Round 3 (only large seeds):</strong> scatter 30 beans only. Repeat.</li>
+          <li>Rule: any beak that collects fewer than 10 items in a round "starves" and does not reproduce. Beaks that collect the most "reproduce" (add a second bird of that type next round, if you have extra utensils).</li>
+        </ol>
+      </div>
+    </div>
+    <h3>Data table: items collected in 30 seconds</h3>
+    <table class="datatable" data-id="w8p" data-cols='["Beak type","Round 1: mixed","Round 2: small seeds","Round 3: large seeds","Survived all rounds?"]' data-rows='["Spoon","Fork","Tweezers / chopsticks","Clothespin / clip"]'></table>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w8pa1">1. Which beak was "fittest" in each environment? Was any beak best in all three?</label><textarea id="w8pa1" data-note="w8p-a1"></textarea></div>
+    <div class="field"><label for="w8pa2">2. Map each part of Darwin's argument (variation, inheritance, overproduction, differential success) onto this simulation. What does the simulation leave out?</label><textarea id="w8pa2" data-note="w8p-a2"></textarea></div>
+    <div class="field"><label for="w8pa3">3. In 1977, a drought on the Galápagos left mostly large, hard seeds. Predict what happened to beak size in the next generation of medium ground finches. (Researchers Peter and Rosemary Grant measured exactly this.)</label><textarea id="w8pa3" data-note="w8p-a3"></textarea></div>
+    <div class="field"><label for="w8pa4">4. Why can't an individual bird's beak "adapt" during its lifetime in a way that's passed on?</label><textarea id="w8pa4" data-note="w8p-a4"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 8 Quiz</h2>
+    <div class="quiz" data-quiz="8"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>

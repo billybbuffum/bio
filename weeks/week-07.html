@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 7 · Cell Division & Inheritance | Bio 101</title>
+<meta name="description" content="Bio 101 Week 7: the cell cycle, mitosis, meiosis, Mendelian genetics, Punnett squares and pedigrees.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script defer src="../assets/js/data/terms.js"></script>
+<script defer src="../assets/js/data/quizzes.js"></script>
+<script defer src="../assets/js/course.js"></script>
+<script defer src="../assets/js/labs/week07.js"></script>
+</head>
+<body data-root=".." data-week="7">
+<header id="site-header"></header>
+<main class="wrap">
+  <div class="week-hero">
+    <div class="eyebrow">Week 7 of 10</div>
+    <h1>Cell Division & Inheritance</h1>
+    <p>How does one fertilized egg become 30 trillion cells? And why do you look like your parents, but not exactly? This week connects the movement of chromosomes to the patterns of inheritance Gregor Mendel discovered in his pea garden.</p>
+    <div class="progress" style="max-width:420px"><span id="week-progress" style="width:0"></span></div>
+  </div>
+
+  <section data-tab="overview" data-label="Overview">
+    <div class="two-col">
+      <div>
+        <h2>Learning objectives</h2>
+        <ol class="objectives">
+          <li>Describe the cell cycle and explain how its checkpoints relate to cancer.</li>
+          <li>Describe the phases of mitosis and meiosis and compare their outcomes.</li>
+          <li>Explain how meiosis and fertilization generate genetic variation.</li>
+          <li>Use genetics vocabulary: allele, genotype, phenotype, homozygous, heterozygous, dominant, recessive.</li>
+          <li>Solve monohybrid, dihybrid and sex-linked crosses with Punnett squares.</li>
+          <li>Describe non-Mendelian patterns and interpret simple pedigrees.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>This week's checklist</h2>
+        <ul class="checklist">
+          <li data-item="reading">Read the lesson (~60 min)</li>
+          <li data-item="lab">Virtual labs: Punnett Square Lab + Name That Phase (~50 min)</li>
+          <li data-item="practical">Practical: Coin-flip genetics (~45 min)</li>
+          <li data-item="quiz">Pass the quiz with ≥ 70%</li>
+        </ul>
+        <div class="card small"><strong>Companion reading:</strong> OpenStax <em>Biology 2e</em>,
+          <a href="https://openstax.org/books/biology-2e/pages/10-introduction" target="_blank" rel="noopener">Ch. 10 Cell Reproduction</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/11-introduction" target="_blank" rel="noopener">Ch. 11 Meiosis</a>,
+          <a href="https://openstax.org/books/biology-2e/pages/12-introduction" target="_blank" rel="noopener">Ch. 12 Mendel's Experiments</a>.</div>
+        <div class="card small"><strong>Get ready for the practical:</strong> two coins (ideally different kinds), paper, and colored pencils.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-tab="reading" data-label="Reading">
+    <article class="reading">
+      <h2>1. The cell cycle</h2>
+      <p>Your body makes millions of new cells every second, replacing skin, gut lining and blood. Dividing cells follow the <strong>cell cycle</strong>:</p>
+      <ul>
+        <li><strong>Interphase</strong> (most of the cycle): <strong>G1</strong> (growth and normal work), <strong>S</strong> (DNA <em>synthesis</em>, when each chromosome is copied into two identical <em>sister chromatids</em>), and <strong>G2</strong> (preparing to divide).</li>
+        <li><strong>M phase</strong>: <strong>mitosis</strong> (dividing the nucleus) followed by <strong>cytokinesis</strong> (dividing the cytoplasm).</li>
+      </ul>
+      <p>Some cells, like most neurons and heart muscle cells, exit the cycle into a resting state called G0 and rarely divide again. Molecular <strong>checkpoints</strong> act like quality-control inspectors: is the DNA undamaged? Fully copied? Are all chromosomes attached to the spindle? The protein <strong>p53</strong>, the "guardian of the genome," halts the cycle or triggers cell suicide (<em>apoptosis</em>) when DNA is damaged.</p>
+      <div class="callout human"><span class="callout-title">🫀 Human connection: cancer is cell division out of control</span>
+        <p>Cancer develops when mutations accumulate in genes that control the cell cycle. Damaged "accelerators" (oncogenes) get stuck on, and damaged "brakes" (tumor suppressors such as p53 and BRCA1) fail. About half of all human cancers carry a mutated p53. Many chemotherapy drugs target rapidly dividing cells, which is why they also affect hair follicles and the gut lining.</p>
+      </div>
+
+      <h2>2. Mitosis: making identical copies</h2>
+      <p>Mitosis produces <strong>two genetically identical diploid daughter cells</strong>. It is used for growth, repair and asexual reproduction. Remember the phases with <strong>PMAT</strong>:</p>
+      <ol>
+        <li><strong>Prophase:</strong> chromosomes condense into visible X shapes, the nuclear envelope breaks down, and the spindle (made of microtubules) begins to form.</li>
+        <li><strong>Metaphase:</strong> chromosomes line up single-file along the cell's <strong>m</strong>iddle.</li>
+        <li><strong>Anaphase:</strong> sister chromatids are pulled <strong>a</strong>part toward opposite poles.</li>
+        <li><strong>Telophase:</strong> <strong>t</strong>wo new nuclei form, and cytokinesis splits the cell in two.</li>
+      </ol>
+
+      <h2>3. Meiosis: making unique gametes</h2>
+      <p>Your body cells are <strong>diploid (2n = 46)</strong>: two sets of 23 chromosomes, one from each parent. Each pair consists of <strong>homologous chromosomes</strong> carrying the same genes, though possibly different versions. If eggs and sperm were also diploid, the chromosome number would double every generation. <strong>Meiosis</strong> solves this by producing <strong>haploid (n = 23)</strong> gametes through two divisions:</p>
+      <ul>
+        <li><strong>Meiosis I</strong> separates <em>homologous pairs</em>. In prophase I, homologs pair up and exchange segments (<strong>crossing over</strong>). In metaphase I, pairs line up side by side, each pair oriented randomly.</li>
+        <li><strong>Meiosis II</strong> separates <em>sister chromatids</em>, much like mitosis.</li>
+      </ul>
+      <p>The result: <strong>four genetically unique haploid cells</strong>. Three sources of variation make you unique:</p>
+      <ol>
+        <li><strong>Independent assortment:</strong> with 23 pairs, each parent can make 2²³ ≈ 8.4 million chromosome combinations.</li>
+        <li><strong>Crossing over</strong> shuffles alleles within chromosomes, creating essentially unlimited combinations.</li>
+        <li><strong>Random fertilization:</strong> any sperm × any egg gives about 70 trillion combinations before crossing over is even counted.</li>
+      </ol>
+      <div class="table-scroll"><table class="simple">
+        <tr><th></th><th>Mitosis</th><th>Meiosis</th></tr>
+        <tr><td>Purpose</td><td>Growth, repair</td><td>Making gametes (eggs, sperm)</td></tr>
+        <tr><td>Divisions</td><td>1</td><td>2</td></tr>
+        <tr><td>Daughter cells</td><td>2, diploid (46)</td><td>4, haploid (23)</td></tr>
+        <tr><td>Genetically</td><td>Identical to parent</td><td>Unique</td></tr>
+        <tr><td>Homologs pair / cross over?</td><td>No</td><td>Yes (prophase I)</td></tr>
+      </table></div>
+      <p>When chromosomes fail to separate properly (<strong>nondisjunction</strong>), gametes end up with an extra or missing chromosome. <strong>Trisomy 21</strong> (three copies of chromosome 21) causes Down syndrome. Its risk rises with maternal age, partly because eggs pause partway through meiosis I for decades.</p>
+
+      <h2>4. Mendel and the laws of inheritance</h2>
+      <p>In the 1850s–60s, the monk <strong>Gregor Mendel</strong> bred about 28,000 pea plants and counted their traits. Before him, most people believed in "blending inheritance," where offspring are an average of their parents. Mendel showed that traits are passed on as discrete units, which we now call genes, and he did this without knowing DNA or chromosomes existed.</p>
+      <p>When he crossed pure purple-flowered plants with pure white ones, all offspring (F1) were purple. When the F1 plants self-pollinated, white reappeared in the F2 generation in a ratio of about <strong>3 purple : 1 white</strong> (705:224 in his data). The white "factor" had been hidden, not lost.</p>
+      <h3>Vocabulary</h3>
+      <ul>
+        <li>A <strong>gene</strong> comes in versions called <strong>alleles</strong> (e.g., <em>A</em> = purple, <em>a</em> = white).</li>
+        <li><strong>Genotype</strong> is the alleles you carry (AA, Aa, aa). <strong>Phenotype</strong> is the trait you show (purple, white).</li>
+        <li><strong>Homozygous</strong> means two identical alleles (AA or aa). <strong>Heterozygous</strong> means two different alleles (Aa).</li>
+        <li>A <strong>dominant</strong> allele shows its effect even with one copy. A <strong>recessive</strong> allele shows only when there is no dominant allele.</li>
+      </ul>
+      <h3>Mendel's laws</h3>
+      <ol>
+        <li><strong>Law of segregation:</strong> the two alleles for a gene separate during gamete formation, so each gamete carries one. (This is homologs separating in meiosis I.)</li>
+        <li><strong>Law of independent assortment:</strong> alleles for different genes sort independently. (This is random orientation in metaphase I.) It applies to genes on different chromosomes. Genes close together on the same chromosome are <em>linked</em>.</li>
+      </ol>
+      <h3>Punnett squares</h3>
+      <p>A Punnett square lists one parent's possible gametes across the top and the other's down the side; each box is a possible offspring. For Aa × Aa:</p>
+      <table class="punnett" style="margin:0 auto"><tr><th></th><th>A</th><th>a</th></tr><tr><th>A</th><td>AA</td><td>Aa</td></tr><tr><th>a</th><td>Aa</td><td>aa</td></tr></table>
+      <p>Genotypes come out 1 AA : 2 Aa : 1 aa, and phenotypes 3 dominant : 1 recessive. These are <em>probabilities</em> for each child, not guarantees. A couple who are both carriers has a 25% chance of an affected child <em>with every pregnancy</em>.</p>
+      <details class="check"><summary>A purple pea plant could be AA or Aa. How could you find out which?</summary>
+        <p>Do a <strong>test cross</strong>: cross it with a white (aa) plant. If any offspring are white, the purple parent must be Aa. If all of many offspring are purple, it's almost certainly AA.</p>
+      </details>
+
+      <h2>5. Beyond Mendel</h2>
+      <ul>
+        <li><strong>Incomplete dominance:</strong> heterozygotes are intermediate, as when red × white snapdragons give pink.</li>
+        <li><strong>Codominance:</strong> both alleles show fully. ABO blood type is the classic case: I<sup>A</sup> and I<sup>B</sup> are codominant and both dominant over i.</li>
+        <li><strong>Multiple alleles:</strong> a gene can have more than two alleles in a population (ABO has three).</li>
+        <li><strong>Polygenic traits:</strong> height, skin color and eye color are shaped by many genes, giving smooth bell-curve variation. Even "simple" textbook traits like eye color and tongue rolling turn out <em>not</em> to follow single-gene patterns in real people.</li>
+        <li><strong>Environment matters:</strong> genes set a range, and nutrition, health and experience act within it.</li>
+        <li><strong>Sex-linked traits:</strong> genes on the X chromosome show a special pattern. Females are XX and males XY, so a male with one recessive X allele shows the trait. Red-green color blindness affects ~8% of men of Northern European ancestry but only ~0.5% of women. Hemophilia, famously passed through Queen Victoria's descendants, is another example.</li>
+      </ul>
+
+      <h2>6. Pedigrees: inheritance in families</h2>
+      <p>We can't run breeding experiments on humans, so geneticists study family trees called <strong>pedigrees</strong>. Squares are males and circles are females; shaded symbols are affected individuals; horizontal lines join parents, and vertical lines lead to children.</p>
+      <figure>
+        <svg viewBox="0 0 360 190" width="360" role="img" aria-label="Pedigree: two unaffected parents with three children, one affected daughter">
+          <g stroke="currentColor" stroke-width="2" fill="none">
+            <rect x="110" y="20" width="30" height="30"/><circle cx="235" cy="35" r="15"/>
+            <line x1="140" y1="35" x2="220" y2="35"/><line x1="180" y1="35" x2="180" y2="80"/><line x1="90" y1="80" x2="270" y2="80"/>
+            <line x1="90" y1="80" x2="90" y2="110"/><line x1="180" y1="80" x2="180" y2="110"/><line x1="270" y1="80" x2="270" y2="110"/>
+            <rect x="75" y="110" width="30" height="30"/><circle cx="180" cy="125" r="15" fill="currentColor"/><circle cx="270" cy="125" r="15"/>
+          </g>
+          <g font-family="system-ui" font-size="12" fill="currentColor" text-anchor="middle">
+            <text x="125" y="66">Aa</text><text x="235" y="66">Aa</text><text x="90" y="160">A?</text><text x="180" y="160">aa</text><text x="270" y="160">A?</text>
+            <text x="180" y="184">Two unaffected parents with an affected child → autosomal recessive</text>
+          </g>
+        </svg>
+        <figcaption>Figure 7.1: A pedigree for an autosomal recessive trait such as cystic fibrosis.</figcaption>
+      </figure>
+      <ul>
+        <li><strong>Autosomal recessive</strong> (e.g., cystic fibrosis, sickle-cell disease): can skip generations, and unaffected carrier parents can have affected children.</li>
+        <li><strong>Autosomal dominant</strong> (e.g., Huntington's disease, Marfan syndrome): appears in every generation, and every affected person has an affected parent.</li>
+        <li><strong>X-linked recessive</strong> (e.g., hemophilia, color blindness): mostly affects males, who inherit it through carrier mothers.</li>
+      </ul>
+
+      <div class="callout"><span class="callout-title">Key takeaways</span>
+        <ul>
+          <li>Cell cycle: G1 → S (DNA copied) → G2 → mitosis → cytokinesis, policed by checkpoints. When these fail, cancer can result.</li>
+          <li>Mitosis gives 2 identical diploid cells. Meiosis gives 4 unique haploid gametes.</li>
+          <li>Variation comes from independent assortment, crossing over and random fertilization.</li>
+          <li>Mendel's laws of segregation and independent assortment, worked out with Punnett squares, predict probabilities.</li>
+          <li>Real inheritance also includes incomplete dominance, codominance, polygenic traits, sex linkage and environment.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="btn-row"><button data-complete="reading"></button><a class="btn" href="#flashcards">Next: Key terms →</a></div>
+  </section>
+
+  <section data-tab="flashcards" data-label="Key Terms">
+    <h2>Key terms</h2>
+    <div class="flashcards"></div>
+  </section>
+
+  <section data-tab="lab" data-label="Virtual Lab">
+    <h2>Virtual Lab</h2>
+    <div data-lab="punnett"></div>
+    <div data-lab="division"></div>
+    <div class="btn-row"><button data-complete="lab"></button></div>
+  </section>
+
+  <section data-tab="practical" data-label="Practical">
+    <h2>Practical: Coin-Flip Genetics</h2>
+    <p>Meiosis is a coin toss: each parent passes on one of their two alleles at random. You'll use coins as gametes to (A) "make a baby" of a fictional species and (B) test Mendel's 3:1 ratio with real chance.</p>
+    <div class="callout warn"><span class="callout-title">Note</span>The traits in Part A belong to an imaginary creature, the "Biobeast," and follow simple one-gene rules to make the mechanics clear. Real human facial features are polygenic.</div>
+    <h3>Part A: Make a Biobeast</h3>
+    <p>Both parents are heterozygous for every trait. For each trait, flip coin 1 for mom and coin 2 for dad: <strong>heads = dominant allele (capital), tails = recessive allele (lowercase)</strong>. Record the genotype and phenotype, then draw your Biobeast!</p>
+    <div class="table-scroll"><table class="simple">
+      <tr><th>Trait</th><th>Dominant</th><th>Recessive</th><th>Inheritance</th></tr>
+      <tr><td>Eye number</td><td>E: two eyes</td><td>e: one eye</td><td>Complete dominance</td></tr>
+      <tr><td>Antennae</td><td>A: antennae</td><td>a: none</td><td>Complete dominance</td></tr>
+      <tr><td>Skin color</td><td>R: red</td><td>W: white</td><td>Incomplete: RW = pink</td></tr>
+      <tr><td>Tail</td><td>T: curly tail</td><td>t: straight tail</td><td>Complete dominance</td></tr>
+      <tr><td>Spots</td><td>S: spots</td><td>s: no spots</td><td>Complete dominance</td></tr>
+      <tr><td>Horns</td><td>Hᴸ: long</td><td>Hˢ: short</td><td>Codominance: HᴸHˢ = one long and one short</td></tr>
+    </table></div>
+    <table class="datatable" data-id="w7pa" data-cols='["Trait","Mom allele","Dad allele","Genotype","Phenotype"]' data-rows='["Eye number","Antennae","Skin color","Tail","Spots","Horns"]'></table>
+    <div class="field"><label for="w7pd">Describe (or sketch on paper) your Biobeast:</label><textarea id="w7pd" data-note="w7p-desc"></textarea></div>
+    <h3>Part B: Testing the 3:1 ratio</h3>
+    <p>Flip both coins together 40 times (a cross of Tt × Tt). Tally each outcome: HH = TT, HT or TH = Tt, TT = tt.</p>
+    <table class="datatable" data-id="w7pb" data-cols='["Outcome","Tally after 20 flips","Total after 40 flips","Expected (out of 40)"]' data-rows='["TT (curly)","Tt (curly)","tt (straight)","Total curly : straight"]'></table>
+    <p class="small muted">Expected: TT = 10, Tt = 20, tt = 10, so 30 curly : 10 straight. Use the Punnett lab's chi-square feature (set N = 40) to compare, or compute χ² = Σ (O − E)² / E yourself. The critical value for 1 degree of freedom is 3.84.</p>
+    <h3>Analysis</h3>
+    <div class="field"><label for="w7pa1">1. How close were your results to 3:1? Calculate χ² for curly vs straight. Do your data fit Mendel's prediction?</label><textarea id="w7pa1" data-note="w7p-a1"></textarea></div>
+    <div class="field"><label for="w7pa2">2. Which stage of meiosis does each coin flip represent? Which of Mendel's laws does flipping separate coins for each trait represent?</label><textarea id="w7pa2" data-note="w7p-a2"></textarea></div>
+    <div class="field"><label for="w7pa3">3. If two siblings had the same parents, would they get the same Biobeast? Why or why not? (Identical twins: what's different?)</label><textarea id="w7pa3" data-note="w7p-a3"></textarea></div>
+    <div class="field"><label for="w7pa4">4. Optional family research: Draw a pedigree for a trait in your family (e.g., freckles, a widow's peak or attached earlobes). Remember these are often not simple single-gene traits. What patterns do you see?</label><textarea id="w7pa4" data-note="w7p-a4"></textarea></div>
+    <div class="btn-row"><button data-complete="practical"></button></div>
+  </section>
+
+  <section data-tab="quiz" data-label="Quiz">
+    <h2>Week 7 Quiz</h2>
+    <div class="quiz" data-quiz="7"></div>
+  </section>
+
+  <div id="week-nav"></div>
+</main>
+<footer id="site-footer"></footer>
+</body>
+</html>
