@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jev Playground</title>
+<style>
+  :root {
+    --bg: #f6f6f3; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6b66; --line: #e2e1dc;
+    --accent: #2f5bd3; --accent-soft: #e4ebfb; --good: #2e7d4f; --warn: #b26a00; --bad: #b3261e;
+    --bar: #d9dfee; --code: #f1f0ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414; --panel: #1d1d1d; --ink: #ecebe6; --muted: #9a9993; --line: #2f2f2d;
+      --accent: #7d9bff; --accent-soft: #232c45; --good: #6cc48f; --warn: #e3a54a; --bad: #f08a80;
+      --bar: #2b3247; --code: #252523;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 14px 20px; border-bottom: 1px solid var(--line); display: flex;
+           gap: 12px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0 12px 0 0; }
+  header .hint { color: var(--muted); font-size: 13px; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; padding: 16px 20px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 12px 16px; } }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-width: 0; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 8px; }
+  textarea, input, select { width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+           border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
+  textarea { resize: vertical; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+           border-radius: 6px; padding: 6px 11px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; padding: 8px 16px; }
+  button.link { border: none; background: none; color: var(--muted); padding: 2px 4px; }
+  button.link:hover { color: var(--bad); }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .row > * { min-width: 0; }
+  .q { border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin: 10px 0; }
+  .q .head { display: grid; grid-template-columns: 1fr 120px auto; gap: 8px; margin-bottom: 8px; }
+  .q label { display: block; font-size: 12px; color: var(--muted); margin: 6px 0 3px; }
+  .crit { display: grid; grid-template-columns: 150px 1fr auto; gap: 6px; margin: 4px 0; }
+  .crit.score { grid-template-columns: 28px 1fr auto; }
+  .crit .lvl { color: var(--muted); text-align: center; align-self: center; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+  .meta { color: var(--muted); font-size: 12.5px; }
+  .answer { border-top: 1px solid var(--line); padding: 12px 0; }
+  .answer:first-child { border-top: none; padding-top: 4px; }
+  .answer h3 { margin: 0 0 2px; font-size: 14px; }
+  .answer .type { color: var(--muted); font-weight: 400; font-size: 12px; margin-left: 6px; }
+  .headline { font-size: 22px; font-weight: 650; margin: 4px 0 6px; }
+  .bars { display: grid; grid-template-columns: minmax(80px, max-content) 1fr 48px; gap: 4px 10px; align-items: center; }
+  .bars .lbl { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bars .lbl.win { font-weight: 650; }
+  .track { height: 12px; background: var(--code); border-radius: 3px; overflow: hidden; }
+  .fill { height: 100%; background: var(--bar); }
+  .fill.win { background: var(--accent); }
+  .pct { font-variant-numeric: tabular-nums; text-align: right; font-size: 12.5px; color: var(--muted); }
+  .gauge { position: relative; height: 16px; background: linear-gradient(90deg, var(--bad), var(--warn) 50%, var(--good)); border-radius: 8px; opacity: .85; }
+  .gauge .needle { position: absolute; top: -4px; width: 3px; height: 24px; background: var(--ink); border-radius: 2px; transform: translateX(-1px); }
+  .gauge-scale { display: flex; justify-content: space-between; color: var(--muted); font-size: 11.5px; margin-top: 3px; }
+  .policy { margin-top: 8px; padding: 8px 10px; background: var(--accent-soft); border-radius: 6px; font-size: 13px; }
+  .policy input[type=range] { width: 140px; vertical-align: middle; padding: 0; }
+  .tag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+  .tag.yes { background: color-mix(in srgb, var(--good) 20%, transparent); color: var(--good); }
+  .tag.no { background: color-mix(in srgb, var(--bad) 18%, transparent); color: var(--bad); }
+  .tag.human { background: color-mix(in srgb, var(--warn) 22%, transparent); color: var(--warn); }
+  .legend { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .error { color: var(--bad); white-space: pre-wrap; }
+  .empty { color: var(--muted); padding: 30px 0; text-align: center; }
+  details { margin-top: 14px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+  pre { background: var(--code); border-radius: 6px; padding: 10px; overflow: auto; max-height: 360px; margin: 6px 0 0; }
+  .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--accent);
+          border-radius: 50%; animation: s .8s linear infinite; vertical-align: -2px; }
+  @keyframes s { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Jev Playground</h1>
+  <select id="preset" style="width:auto"></select>
+  <select id="model" style="width:auto" title="Model"><option value="">jev-latest (default)</option></select>
+  <span class="hint">Edit the state and questions, then press Run (Ctrl+Enter).</span>
+  <span style="flex:1"></span>
+  <button class="primary" id="runTop">Run</button>
+</header>
+
+<main>
+  <section>
+    <h2>State: the content being judged</h2>
+    <textarea id="state" class="mono" rows="9" spellcheck="false"></textarea>
+    <div class="meta" id="stateHint"></div>
+
+    <h2 style="margin-top:16px">Questions: the semantics, as data</h2>
+    <div id="questions"></div>
+    <div class="toolbar">
+      <button data-add="noul">+ Yes/no (Noul)</button>
+      <button data-add="choice">+ Pick a label (Choice)</button>
+      <button data-add="score">+ Rubric (Score)</button>
+      <span style="flex:1"></span>
+      <button class="primary" id="run">Run</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Answers</h2>
+    <div class="meta" id="runMeta"></div>
+    <div id="answers"><div class="empty">Press Run to send the request to Jev.</div></div>
+    <details>
+      <summary>Raw request and response</summary>
+      <pre class="mono" id="rawReq"></pre>
+      <pre class="mono" id="rawRes"></pre>
+    </details>
+  </section>
+</main>
+
+<script>
+const PRESETS = {
+  "Bio 101: grade an osmosis answer": {
+    state: {
+      exam_question: "Explain what osmosis is and which way the water moves.",
+      reference_answer: "Osmosis is the movement of water across a selectively permeable membrane from a region of lower solute concentration to a region of higher solute concentration.",
+      student_answer: "It's when salt moves through the cell membrane until both sides are equal."
+    },
+    questions: [
+      { name: "is_attempt", type: "noul", instructions: "Is student_answer a genuine attempt to answer exam_question?",
+        criteria: { true: "It tries to explain osmosis, even if it is wrong.", false: "It is blank, off-topic, a joke, or 'I don't know'." } },
+      { name: "direction_correct", type: "noul", instructions: "Does student_answer say that water moves toward the side with the higher solute concentration?" },
+      { name: "misconception", type: "choice", instructions: "Which description best fits student_answer?",
+        criteria: { none: "No misconception; the biology is right.",
+          solute_moves: "Says the solute (salt, sugar) crosses the membrane instead of water.",
+          direction_reversed: "Says water moves toward the lower solute concentration.",
+          no_membrane: "Describes plain diffusion with no membrane involved.",
+          other: "Wrong or incomplete in some other way." } },
+      { name: "quality", type: "score", instructions: "Rate student_answer against reference_answer.",
+        criteria: ["No correct biology.", "Mentions water or a membrane but the mechanism is wrong or missing.",
+          "Correct mechanism but missing either the membrane or the direction.",
+          "Fully correct: water, selectively permeable membrane, and direction."] }
+    ]
+  },
+  "Fleet: driver inspection note": {
+    state: { vehicle: "Class 8 tractor", driver_note: "Truck pulls hard to the left when I brake on the highway, started yesterday. Also small crack in the passenger mirror." },
+    questions: [
+      { name: "unsafe_to_drive", type: "noul", instructions: "Does driver_note describe a defect that makes the vehicle unsafe to drive until repaired?" },
+      { name: "system", type: "choice", instructions: "Which system is the most serious defect in?",
+        criteria: { brakes: null, tires: null, lights: null, engine: null, steering: null, cosmetic: "Appearance only; no effect on safety or operation." } },
+      { name: "urgency", type: "score", instructions: "How urgently does this need a mechanic?",
+        criteria: ["Can wait until the next scheduled service.", "Within the week.", "Before the next trip.", "Take out of service now."] }
+    ]
+  },
+  "PLG: upsell need in a support ticket": {
+    state: { products_owned: ["Vehicle telematics", "ELD compliance"],
+      ticket: "One of our drivers says he was cut off and that's why he rear-ended someone, but we have no way to prove it. Insurance is asking us for evidence. Is there anything in the system that shows what happened?" },
+    questions: [
+      { name: "unmet_need", type: "noul", instructions: "Is the customer describing a problem that a product they do not already own would solve?" },
+      { name: "product", type: "choice", instructions: "Which product would solve it?",
+        criteria: { dash_cams: "Video of the road and driver.", equipment_monitoring: "Tracking trailers and assets.",
+          maintenance: "Scheduling and tracking repairs.", none: "Nothing they don't already own." } },
+      { name: "frustrated", type: "noul", instructions: "Is the customer frustrated or upset with us right now?" }
+    ]
+  },
+  "Blank": { state: "", questions: [{ name: "question_1", type: "noul", instructions: "" }] }
+};
+
+const $ = (s) => document.querySelector(s);
+const qBox = $("#questions");
+let questions = [];
+let lastAnswers = null;
+const thresholds = {};   // per noul question: [low, high]
+
+function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]); }
+
+function loadPreset(name) {
+  const p = structuredClone(PRESETS[name]);
+  $("#state").value = typeof p.state === "string" ? p.state : JSON.stringify(p.state, null, 2);
+  questions = p.questions;
+  renderQuestions(); stateHint();
+  $("#answers").innerHTML = '<div class="empty">Press Run to send the request to Jev.</div>';
+  $("#runMeta").textContent = ""; lastAnswers = null;
+}
+
+function stateHint() {
+  const v = $("#state").value.trim();
+  let kind = "plain text";
+  if (/^[\[{]/.test(v)) { try { JSON.parse(v); kind = "JSON (field names can be referenced in questions)"; } catch { kind = "plain text (looks like JSON but does not parse)"; } }
+  $("#stateHint").textContent = "Sent as " + kind + ".";
+}
+
+function blankQuestion(type) {
+  const n = questions.length + 1;
+  if (type === "noul") return { name: "question_" + n, type, instructions: "" };
+  if (type === "choice") return { name: "question_" + n, type, instructions: "", criteria: { option_a: "", option_b: "" } };
+  return { name: "question_" + n, type, instructions: "", criteria: ["Low", "Medium", "High"] };
+}
+
+function renderQuestions() {
+  qBox.innerHTML = "";
+  questions.forEach((q, i) => {
+    const el = document.createElement("div");
+    el.className = "q";
+    let crit = "";
+    if (q.type === "noul") {
+      const c = q.criteria || {};
+      crit = `<label>What counts as yes (optional)</label><input data-f="ctrue" value="${esc(c.true)}">
+              <label>What counts as no (optional)</label><input data-f="cfalse" value="${esc(c.false)}">`;
+    } else if (q.type === "choice") {
+      crit = `<label>Labels and when each applies (description optional)</label>` +
+        Object.entries(q.criteria).map(([k, v], j) => `<div class="crit">
+          <input class="mono" data-ck="${j}" value="${esc(k)}" placeholder="label">
+          <input data-cv="${j}" value="${esc(v)}" placeholder="description">
+          <button class="link" data-cdel="${j}" title="Remove">✕</button></div>`).join("") +
+        `<button data-cadd>+ label</button>`;
+    } else {
+      crit = `<label>Rubric levels, lowest first (position = score)</label>` +
+        q.criteria.map((v, j) => `<div class="crit score"><span class="lvl">${j}</span>
+          <input data-sv="${j}" value="${esc(v)}"><button class="link" data-sdel="${j}" title="Remove">✕</button></div>`).join("") +
+        `<button data-sadd>+ level</button>`;
+    }
+    el.innerHTML = `<div class="head">
+        <input class="mono" data-f="name" value="${esc(q.name)}" title="Name you read the answer back under">
+        <select data-f="type"><option value="noul">Noul</option><option value="choice">Choice</option><option value="score">Score</option></select>
+        <button class="link" data-del title="Delete question">✕</button></div>
+      <label>Instructions</label><textarea data-f="instructions" rows="2">${esc(q.instructions)}</textarea>${crit}`;
+    el.querySelector('[data-f="type"]').value = q.type;
+    el.addEventListener("input", (e) => editQuestion(i, e.target, false));
+    el.addEventListener("change", (e) => { if (e.target.dataset.f === "type") editQuestion(i, e.target, true); });
+    el.addEventListener("click", (e) => clickQuestion(i, e.target));
+    qBox.appendChild(el);
+  });
+}
+
+function editQuestion(i, t, structural) {
+  const q = questions[i], d = t.dataset;
+  if (d.f === "name" || d.f === "instructions") q[d.f] = t.value;
+  else if (d.f === "type" && structural) {
+    const fresh = blankQuestion(t.value); fresh.name = q.name; fresh.instructions = q.instructions;
+    questions[i] = fresh; renderQuestions();
+  }
+  else if (d.f === "ctrue" || d.f === "cfalse") { q.criteria = q.criteria || {}; q.criteria[d.f === "ctrue" ? "true" : "false"] = t.value; }
+  else if (d.ck !== undefined || d.cv !== undefined) {
+    const entries = Object.entries(q.criteria), j = +(d.ck ?? d.cv);
+    if (d.ck !== undefined) entries[j][0] = t.value; else entries[j][1] = t.value;
+    q.criteria = Object.fromEntries(entries);
+  }
+  else if (d.sv !== undefined) q.criteria[+d.sv] = t.value;
+}
+
+function clickQuestion(i, t) {
+  const q = questions[i], d = t.dataset;
+  if ("del" in d) questions.splice(i, 1);
+  else if ("cadd" in d) q.criteria["option_" + (Object.keys(q.criteria).length + 1)] = "";
+  else if (d.cdel !== undefined) { const e = Object.entries(q.criteria); e.splice(+d.cdel, 1); q.criteria = Object.fromEntries(e); }
+  else if ("sadd" in d) q.criteria.push("");
+  else if (d.sdel !== undefined) q.criteria.splice(+d.sdel, 1);
+  else return;
+  renderQuestions();
+}
+
+function buildRequest() {
+  const raw = $("#state").value;
+  let state = raw;
+  if (/^\s*[\[{]/.test(raw)) { try { state = JSON.parse(raw); } catch {} }
+  const out = {};
+  for (const q of questions) {
+    const wire = { type: q.type };
+    if (q.instructions.trim()) wire.instructions = q.instructions;
+    if (q.type === "noul") {
+      const c = {};
+      if (q.criteria?.true?.trim()) c.true = q.criteria.true;
+      if (q.criteria?.false?.trim()) c.false = q.criteria.false;
+      if (Object.keys(c).length) wire.criteria = c;
+    } else if (q.type === "choice") {
+      wire.criteria = Object.fromEntries(Object.entries(q.criteria).filter(([k]) => k.trim()).map(([k, v]) => [k.trim(), v?.trim() ? v : null]));
+    } else {
+      wire.criteria = q.criteria.filter(v => v.trim());
+    }
+    out[q.name.trim() || "unnamed"] = wire;
+  }
+  const body = { state, questions: out };
+  if ($("#model").value) body.model = $("#model").value;
+  return body;
+}
+
+async function run() {
+  const body = buildRequest();
+  $("#rawReq").textContent = "POST /v1/systemone\n" + JSON.stringify(body, null, 2);
+  $("#rawRes").textContent = "";
+  $("#runMeta").innerHTML = '<span class="spin"></span> Asking Jev…';
+  $("#run").disabled = $("#runTop").disabled = true;
+  try {
+    const r = await fetch("/api/evaluate", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await r.json();
+    $("#rawRes").textContent = JSON.stringify(data, null, 2);
+    if (!r.ok) throw new Error((data.error || "Request failed") + (data.detail ? "\n\n" + data.detail : ""));
+    $("#runMeta").textContent = `${data.model} · ${data.latency_ms} ms round trip · ${data.usage.input_tokens ?? "?"} input tokens, ${data.usage.output_tokens ?? "?"} output`;
+    lastAnswers = data.answers;
+    renderAnswers();
+  } catch (e) {
+    $("#runMeta").textContent = "";
+    $("#answers").innerHTML = `<div class="error">${esc(e.message)}</div>`;
+  } finally { $("#run").disabled = $("#runTop").disabled = false; }
+}
+
+const pct = (x) => (x * 100).toFixed(x > 0.995 || x < 0.005 ? 0 : 1) + "%";
+
+function barsHTML(items, winner) {
+  return `<div class="bars">` + items.map(([label, p]) => `
+    <div class="lbl ${label === winner ? "win" : ""}" title="${esc(label)}">${esc(label)}</div>
+    <div class="track"><div class="fill ${label === winner ? "win" : ""}" style="width:${(p * 100).toFixed(1)}%"></div></div>
+    <div class="pct">${pct(p)}</div>`).join("") + `</div>`;
+}
+
+function renderAnswers() {
+  const box = $("#answers"); box.innerHTML = "";
+  for (const [name, a] of Object.entries(lastAnswers)) {
+    const el = document.createElement("div"); el.className = "answer";
+    let body = "";
+    if (a.type === "noul") {
+      const [lo, hi] = thresholds[name] ?? (thresholds[name] = [0.35, 0.65]);
+      body = `<div class="headline">${pct(a.noul)} <span class="meta">probability of yes</span></div>
+        <div class="gauge"><div class="needle" style="left:${a.noul * 100}%"></div></div>
+        <div class="gauge-scale"><span>no</span><span>unsure</span><span>yes</span></div>
+        <div class="policy">Your policy: no at or below <input type="range" min="0" max="0.5" step="0.01" value="${lo}" data-lo="${esc(name)}"> <b class="lo">${lo.toFixed(2)}</b>,
+          yes at or above <input type="range" min="0.5" max="1" step="0.01" value="${hi}" data-hi="${esc(name)}"> <b class="hi">${hi.toFixed(2)}</b> → <span class="verdict">${verdictHTML(a.noul, lo, hi)}</span></div>`;
+    } else if (a.type === "choice") {
+      const items = Object.entries(a.probabilities).sort((x, y) => y[1] - x[1]);
+      body = `<div class="headline">${esc(a.choice)} <span class="meta">confidence ${pct(a.confidence)}</span></div>${barsHTML(items, a.choice)}`;
+    } else if (a.type === "score") {
+      const levels = Object.keys(a.probabilities).map(Number).sort((x, y) => x - y);
+      const max = levels[levels.length - 1] || 1;
+      const top = levels.reduce((b, l) => a.probabilities[l] > a.probabilities[b] ? l : b, levels[0]);
+      body = `<div class="headline">${a.score.toFixed(2)} <span class="meta">of ${max} · expected score · confidence ${pct(a.confidence)}</span></div>
+        ${barsHTML(levels.map(l => [`${l}: ${typeof a.legend[l] === "string" ? a.legend[l] : JSON.stringify(a.legend[l])}`, a.probabilities[l]]), `${top}: ${typeof a.legend[top] === "string" ? a.legend[top] : JSON.stringify(a.legend[top])}`)}
+        <div class="legend">The expected score is the probability-weighted average, so it can fall between levels.</div>`;
+    } else {
+      body = `<pre class="mono">${esc(JSON.stringify(a, null, 2))}</pre>`;
+    }
+    el.innerHTML = `<h3>${esc(name)}<span class="type">${a.type}</span></h3>${body}`;
+    box.appendChild(el);
+  }
+  box.querySelectorAll("input[type=range]").forEach(r => r.addEventListener("input", () => {
+    const n = r.dataset.lo ?? r.dataset.hi, t = thresholds[n];
+    if (r.dataset.lo !== undefined) t[0] = +r.value; else t[1] = +r.value;
+    const pol = r.closest(".policy");   // update in place so the drag is not interrupted
+    pol.querySelector(".lo").textContent = t[0].toFixed(2);
+    pol.querySelector(".hi").textContent = t[1].toFixed(2);
+    pol.querySelector(".verdict").innerHTML = verdictHTML(lastAnswers[n].noul, t[0], t[1]);
+  }));
+}
+
+function verdictHTML(p, lo, hi) {
+  return p >= hi ? '<span class="tag yes">YES</span>' : p <= lo ? '<span class="tag no">NO</span>' : '<span class="tag human">ASK A HUMAN</span>';
+}
+
+// Wiring
+const presetSel = $("#preset");
+presetSel.innerHTML = Object.keys(PRESETS).map(k => `<option>${esc(k)}</option>`).join("");
+presetSel.addEventListener("change", () => loadPreset(presetSel.value));
+document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click", () => { questions.push(blankQuestion(b.dataset.add)); renderQuestions(); }));
+$("#state").addEventListener("input", stateHint);
+$("#run").addEventListener("click", run);
+$("#runTop").addEventListener("click", run);
+document.addEventListener("keydown", (e) => { if ((e.ctrlKey || e.metaKey) && e.key === "Enter") run(); });
+fetch("/api/models").then(r => r.ok ? r.json() : null).then(d => {
+  if (!d) return;
+  for (const m of d.models) $("#model").insertAdjacentHTML("beforeend", `<option value="${esc(m.name)}">${esc(m.name)}</option>`);
+}).catch(() => {});
+loadPreset(presetSel.value);
+</script>
+</body>
+</html>

@@ -112,3 +112,19 @@ python grader.py
 
 The thresholds in `grader.py` are starting guesses. Before trusting them, run a
 batch of answers you have already graded by hand and adjust.
+
+## Playground UI
+
+A small local web page for trying questions by hand: edit the state, add
+`Noul`, `Choice` and `Score` questions, run them, and see every probability
+as a bar. Each yes/no answer has two sliders so you can watch how a policy
+threshold turns the same probability into YES, NO or "ask a human".
+
+```bash
+export TYPESAFE_API_KEY=...
+python playground/server.py            # then open http://localhost:8000
+```
+
+It comes with three presets: the osmosis grader, a fleet inspection note, and
+a support ticket checked for an upsell need. "Raw request and response" at the
+bottom shows exactly what went over the wire.
